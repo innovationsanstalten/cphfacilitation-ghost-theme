@@ -58,8 +58,8 @@ gulp.task('css', function (done) {
     pump([
         gulp.src('assets/scss/*.scss'),
         sourcemaps.init(),
-        postcss(processors),
         sass({outputStyle: 'compressed'}).on('error', sass.logError),
+        postcss(processors),
         sourcemaps.write('.'),
         gulp.dest('assets/built/'),
         livereload()
