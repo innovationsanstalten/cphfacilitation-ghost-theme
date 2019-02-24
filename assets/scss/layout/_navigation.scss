@@ -1,0 +1,40 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    background-color: $color-white;
+}
+
+
+.header 
+.navigation {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+
+    &__logo-link {
+        width: 100%;
+        height: 20px;
+    }
+    &__logo-box {
+        width: 100%;
+        height: 20px;
+    }
+    &__logo {
+        width: 50px;
+    }
+    
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    &__list--social {
+        justify-content: flex-end;
+    }
+}
