@@ -14,7 +14,7 @@
         grid-row-end: 8;
         
         margin: -.3rem;
-        background-color: #D77028;
+        background-color: $color-logo-orange;
         
         
     }
@@ -22,14 +22,14 @@
 
     &--button, :visited {
         letter-spacing: .1rem;
-        background-color: #D77028;
-        color: white;
+        background-color: $color-logo-orange;
+        color: $color-white;
         grid-row: 3;
         grid-column: 8;
         margin-left:4rem;
         
         
-        border: solid white 1px;
+        border: solid $color-white 1px;
         position: absolute;
         height: 80%;
         width: 70%;
@@ -61,7 +61,7 @@
         position: absolute;
         top: 0rem;
         left:2.6rem;
-        color: white;
+        color: $color-white;
         letter-spacing: .1rem;
         cursor: pointer;
         max-width: 90%;
@@ -75,7 +75,7 @@
         grid-column-start: 3;
         grid-row: 1;
         letter-spacing: .1rem;
-        color: white;
+        color: $color-white;
         
         
        
