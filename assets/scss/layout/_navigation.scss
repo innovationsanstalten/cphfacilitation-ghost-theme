@@ -1,27 +1,23 @@
-.header {
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    background-color: $color-white;
-}
-
-
-.header 
 .navigation {
+    position: relative;
     display: grid;
     grid-template-columns: 10fr 2fr;
-
-    &__logo-link {
-        width: 100%;
-        height: 20px;
+    &--left {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
     }
-    &__logo-box {
-        width: 100%;
-        height: 20px;
+    &--right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 5rem;
     }
     &__logo {
-        width: 50px;
+        &--img {
+            height: 6rem;
+        }
     }
-    
     &__list {
         list-style: none;
         display: flex;
@@ -29,12 +25,34 @@
     }
     &__link {
         display: block;
-        padding: 10px 20px;
+        padding: 1rem 1.5rem;
+        margin: 0 1rem;
         text-decoration: none;
         color: $color-black;
+        &:hover {
+            border-radius: 5px;
+            border-bottom: 1px solid $color-logo-orange;
+            padding: .9rem 1.5rem;
+        }
+        &--current {
+            border-radius: 5px;
+            color: $color-logo-green;
+            border-bottom: 1px solid $color-logo-green;
+            padding: 9px 15px;
+        }
+        &--social {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: $color-black;
+            border: 1px solid $color-black;
+        }
     }
+    &__find-us {
+        position: absolute;
 
-    &__list--social {
-        justify-content: flex-end;
+        transform: rotate(90deg);
+        right: 0;
     }
 }
