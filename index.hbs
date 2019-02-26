@@ -7,7 +7,7 @@ into the {body} of the default.hbs template --}}
     {{> "site-nav"}}
 </div>
 </header>
-{{!-- {{> floating-header}} --}}
+
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -15,8 +15,13 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed">
             {{#foreach posts}}
 
+<<<<<<< HEAD
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "image-box"}}
+=======
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
+>>>>>>> 56a85c9598568bddcf7c1b0ed474bf1ef4ee7d87
 
             {{/foreach}}
         </div>
@@ -28,7 +33,7 @@ into the {body} of the default.hbs template --}}
 
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             navbar.classList.add("navigation--min");
         }
         else {

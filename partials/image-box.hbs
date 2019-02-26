@@ -1,11 +1,14 @@
 <div class="image-box">
-    <img class="image-box--image" src="{{feature_image}}">
+    <img class="image-box__background-image" src="{{feature_image}}">
     <a href="{{url}}">
-            <div class="image-box--overlay">
-                <h2 class="image-box--title">{{title}}</h2>
-                <div class="image-box--content">
+            <div class="image-box__overlay">
+                <h2 class="image-box__title">{{title}}</h2>
+                <div class="image-box__content">
                     <p>{{excerpt words="33"}}</p>
                 </div>
+                {{#foreach tags}}
+                 <img class="image-box-content__small-picture" src="./assets/images/{{name}}.gif" alt="">    
+            {{/foreach}}
             </div>
         </a>
 </div>
