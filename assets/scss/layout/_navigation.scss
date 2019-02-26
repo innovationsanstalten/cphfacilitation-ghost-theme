@@ -9,6 +9,7 @@
     }
     &--right {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-end;
         padding-right: 1.5rem;
@@ -36,21 +37,21 @@
         &:hover {
             border-radius: 5px;
             border-bottom: 1px solid $color-logo-orange;
-            padding: .1rem 1.5rem;
+            padding: .9rem 1.5rem;
         }
         &--current {
             border-radius: 5px;
-            color: $color-logo-blue;
-            border-bottom: 1px solid $color-logo-blue;
-            padding: .9rem 1.5rem;
+            color: $color-logo-green;
+            border-bottom: 1px solid $color-logo-green;
+            padding: 9px 15px;
         }
         &--social {
             display: inline-block;
-            padding: .5rem 1rem;
+            padding: 5px 10px;
             margin: 0 10px;
             text-decoration: none;
-            color: $color-white;
-            border: 1px solid $color-white;
+            color: $color-black;
+            border: 1px solid $color-black;
         }
     }
     &__find-us {
@@ -86,7 +87,6 @@
         padding: .2rem .8rem;
     }
     .navigation--right {
-        flex-direction: row-reverse;
         justify-content: flex-start;
         padding-right: 4rem;
     }
