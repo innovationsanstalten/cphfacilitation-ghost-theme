@@ -9,7 +9,6 @@
     }
     &--right {
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-end;
         padding-right: 1.5rem;
@@ -88,6 +87,7 @@
     }
     .navigation--right {
         justify-content: flex-start;
+        flex-direction: row-reverse;
         padding-right: 4rem;
     }
 }
