@@ -74,6 +74,24 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+<script>
+    var navbar = document.querySelector(".navigation");
+    var header = document.querySelector(".site-header");
+    var wrapper = document.querySelector(".site-wrapper");
 
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            navbar.classList.add("navigation--min");
+            header.classList.add("header--sticky");
+            wrapper.classList.add("site-wrapper--extended");
+        }
+        else {
+            navbar.classList.remove("navigation--min");
+            header.classList.remove("header--sticky");
+            wrapper.classList.remove("site-wrapper--extended");
+        }
+    }
+</script>
 </body>
 </html>
