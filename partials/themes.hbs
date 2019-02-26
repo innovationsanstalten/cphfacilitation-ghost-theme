@@ -1,0 +1,20 @@
+<section class="temaer">
+    <div class="temaer__left">
+        <h1 class="temaer__title">Temaer</h1>
+        <p class="temaer__paragraph">
+            I alle vores projekter arbejder vi på at implementere FNs verdensmål. Når vi fører
+            projekterne til dørs sikre vi at de vil kunne opnå disse...
+        </p>
+        <a href="#" class="temaer__button">Se alle vores temaer</a>
+    </div>
+
+    <div class="temaer__right">
+        {{#foreach posts}}
+            {{#has tag="Tema"}}
+                <article class="temaer__box temaer__box--{{@number}}">
+                    {{> "image-box"}}
+                </article>
+            {{/has}}
+        {{/foreach}}
+    </div>
+</section>
