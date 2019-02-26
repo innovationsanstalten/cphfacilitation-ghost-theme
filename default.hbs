@@ -18,9 +18,12 @@
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
     <div class="site-wrapper">
+
+        {{> header}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
@@ -97,16 +100,21 @@
 <script>
     var navbar = document.querySelector(".navigation");
     var header = document.querySelector(".site-header");
+    var wrapper = document.getElementsByClassName("site-wrapper")[0];
 
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             navbar.classList.add("navigation--min");
-            header.classList.add("header--sticky");
+            header.classList.add("header--sticky"); 
+            wrapper.classList.add("site-wrapper--extended");
+
+
         }
         else {
             navbar.classList.remove("navigation--min");
             header.classList.remove("header--sticky");
+            wrapper.classList.remove("site-wrapper--extended");
         }
     }
 </script>
