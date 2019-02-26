@@ -1,0 +1,12 @@
+.site-wrapper {
+    &::after {
+        z-index: -1;
+        content: "";
+        width: 25vw;
+        height: 50vh;
+        background-color: $color-logo-green;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

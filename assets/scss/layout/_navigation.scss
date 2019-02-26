@@ -1,5 +1,6 @@
 .navigation {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: grid;
     grid-template-columns: 10fr 2fr;
     &--left {
@@ -15,6 +16,7 @@
     }
     &__logo {
         &--img {
+            margin-right: 20px;
             height: 6rem;
         }
     }
@@ -32,27 +34,49 @@
         &:hover {
             border-radius: 5px;
             border-bottom: 1px solid $color-logo-orange;
-            padding: .9rem 1.5rem;
+            padding: .1rem 1.5rem;
         }
         &--current {
             border-radius: 5px;
-            color: $color-logo-green;
-            border-bottom: 1px solid $color-logo-green;
-            padding: 9px 15px;
+            color: $color-logo-blue;
+            border-bottom: 1px solid $color-logo-blue;
+            padding: .9rem 1.5rem;
         }
         &--social {
             display: inline-block;
-            padding: 5px 10px;
+            padding: .5rem 1rem;
             margin: 0 10px;
             text-decoration: none;
-            color: $color-black;
-            border: 1px solid $color-black;
+            color: $color-white;
+            border: 1px solid $color-white;
         }
     }
     &__find-us {
-        position: absolute;
+        writing-mode: vertical-rl;
+        top: 2rem;
+        position: relative;
+        color: $color-white;
+        transition: all .5s;
+    }
+    
+}
 
-        transform: rotate(90deg);
-        right: 0;
+.inner {
+    position: sticky;
+    top: 0;
+}
+
+.navigation--min {
+    background-color: $color-white;
+
+    .navigation__find-us {
+        color: $color-black;
+        writing-mode: horizontal-tb;
+        top: 0;
+
+    }
+    .navigation__link--social {
+        color: $color-black;
+        border: 1px solid $color-black;
     }
 }
