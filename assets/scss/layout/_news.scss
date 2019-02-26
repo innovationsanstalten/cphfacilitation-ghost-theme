@@ -1,0 +1,112 @@
+.section__news {
+    display: grid;
+    width: 90%;
+    
+
+    margin-right: 0rem;
+    grid-template-columns: repeat(20, 10%);
+    grid-template-rows: 5rem auto 5rem;
+    position: relative;
+    &:before{
+        content: '';
+        grid-column-start:11;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 8;
+        
+        margin: -1rem;
+        background-color: $color-logo-orange;
+        margin-left: 10rem;
+        
+        
+    }
+
+
+    &--button, :visited {
+        letter-spacing: .1rem;
+        background-color: $color-logo-orange;
+        color: $color-white;
+        grid-row: 3;
+        grid-column: 10;
+        height: 70%;
+        
+        
+        border: solid $color-white 1px;
+        align-self: center;
+       
+
+        &:hover, :active {
+            cursor: pointer;
+            box-shadow: .1rem  .1rem .6rem rgba(0, 0, 0, 0.192);
+            
+        }
+    }
+
+    
+
+
+    &--image {
+        
+        height: 95%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        cursor: pointer;
+        margin-right: 50rem;
+        
+    }
+
+    &--top {
+        position: absolute;
+        top: 0rem;
+        left:4.6rem;
+        color: $color-white;
+        letter-spacing: .1rem;
+        cursor: pointer;
+        max-width: 80%;
+        max-height: 90%;
+    }
+
+    &__header {
+        position: absolute;
+        top: -0rem;
+        left:15rem;
+        grid-column-start: 3;
+        grid-row: 1;
+        letter-spacing: .1rem;
+        color: $color-white;
+
+    }
+
+    &--1 {
+        
+        position: relative;
+        grid-column-start: 2;
+        grid-column-end: 5; 
+        grid-row: 2;
+        left: 4.8rem;
+        margin: 0rem 1rem 0rem 1rem;
+
+    }
+
+    &--2{
+        
+        position: relative;
+        grid-column-start: 5;
+        grid-column-end: 8; 
+        grid-row: 2;
+        left: 4.8rem;
+        margin: 0rem 1rem 0rem 1rem;    
+    }
+
+    &--3{
+        
+        position: relative;
+        grid-column-start: 8;
+        grid-column-end: 11; 
+        grid-row: 2;
+        left: 4.8rem;
+        margin: 0rem 1rem 0rem 1rem;     
+    }
+
+}
