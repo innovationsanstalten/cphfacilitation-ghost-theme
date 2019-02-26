@@ -5,6 +5,7 @@
     transition: all .2s;
     color: $color-white;
     border-radius: $border-radius-default;
+    cursor: pointer;
 
     &:link, &:visited {
         padding: 1rem 3rem;
@@ -41,5 +42,6 @@
     &--green {
         background-color: $color-logo-green;
         color: $color-white;
+        border: none;
     }
 }
