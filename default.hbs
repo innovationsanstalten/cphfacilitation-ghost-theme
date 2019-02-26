@@ -93,5 +93,22 @@
         }
     }
 </script>
+
+<script>
+    var navbar = document.querySelector(".navigation");
+    var header = document.querySelector(".site-header");
+
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            navbar.classList.add("navigation--min");
+            header.classList.add("header--sticky");
+        }
+        else {
+            navbar.classList.remove("navigation--min");
+            header.classList.remove("header--sticky");
+        }
+    }
+</script>
 </body>
 </html>
