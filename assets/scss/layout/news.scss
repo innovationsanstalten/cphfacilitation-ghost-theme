@@ -1,0 +1,120 @@
+.section__news {
+    display: grid;
+    width: 100%;
+    grid-column-gap: 1rem;
+    
+    grid-template-columns: repeat(20, 10%);
+    grid-template-rows: 50px auto 50px;
+    position: relative;
+    &:before{
+        content: '';
+        grid-column-start: 10;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 8;
+        
+        margin: -.3rem;
+        background-color: $color-logo-orange;
+        
+        
+    }
+
+
+    &--button, :visited {
+        letter-spacing: .1rem;
+        background-color: $color-logo-orange;
+        color: $color-white;
+        grid-row: 3;
+        grid-column: 8;
+        margin-left:4rem;
+        
+        
+        border: solid $color-white 1px;
+        position: absolute;
+        height: 80%;
+        width: 70%;
+        
+        letter-spacing: .1rem;
+
+        &:hover, :active {
+            cursor: pointer;
+            box-shadow: .1rem  .1rem .6rem rgba(0, 0, 0, 0.192);
+            
+        }
+    }
+
+    
+
+
+    &--image {
+        
+        height: 95%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        cursor: pointer;
+        
+        
+    }
+
+    &--top {
+        position: absolute;
+        top: 0rem;
+        left:2.6rem;
+        color: $color-white;
+        letter-spacing: .1rem;
+        cursor: pointer;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    &__header {
+        position: absolute;
+        top: -1rem;
+        left:4rem;
+        grid-column-start: 3;
+        grid-row: 1;
+        letter-spacing: .1rem;
+        color: $color-white;
+        
+        
+       
+    }
+
+    &--1 {
+        
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: 4; 
+        grid-row: 2;
+        left: 30px;
+
+        
+        
+        
+        
+        
+    }
+
+    &--2{
+        
+        position: relative;
+        grid-column-start: 4;
+        grid-column-end: 7; 
+        grid-row: 2;
+        left: 30px;
+        
+    }
+
+    &--3{
+        
+        position: relative;
+        grid-column-start: 7;
+        grid-column-end: 10; 
+        grid-row: 2;
+        left: 30px;
+        
+        
+    }
+
+}

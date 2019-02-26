@@ -2,12 +2,12 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 {{> header background=@site.cover_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
-    <div class="inner">
-        
-        {{> "site-nav"}}
-    </div>
-</header>
+<div class="inner">
 
+    {{> "site-nav"}}
+</div>
+</header>
+{{!-- {{> floating-header}} --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -15,11 +15,29 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed">
             {{#foreach posts}}
 
+<<<<<<< HEAD
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "image-box"}}
+=======
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+>>>>>>> 56a85c9598568bddcf7c1b0ed474bf1ef4ee7d87
 
             {{/foreach}}
         </div>
 
     </div>
 </main>
+<script>
+    var navbar = document.querySelector(".navigation");
+
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            navbar.classList.add("navigation--min");
+        }
+        else {
+            navbar.classList.remove("navigation--min");
+        }
+    }
+</script>
