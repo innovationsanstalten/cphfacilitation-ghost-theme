@@ -1,28 +1,35 @@
-&__button {
-    &--blue:link,&--blue:visited{
+.button {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all .2s;
+    color: $color-white;
+
+    &:link, &:visited {
         padding: 1rem 3rem;
-        background-color: rgba($color-white, 0);
-        border: 2px solid $color-white;
         font-size: 1.5rem;
         text-decoration: none;
-        color: inherit;
         transition: all .2s;
+        color: $color-white;
+    }
+
+    &:hover, &:active {
+        @include button-shadow;
+    }
+
+    &--blue:link, &--blue:visited{
+        background-color: rgba($color-white, 0);
+        border: 2px solid $color-white;
     }
 
     &--blue:hover{
         background-color: rgba($color-white, 1);
         color: $color-logo-blue;
-        @include button-shadow;
     }
 
-    &--orange:link,&--orange:visited{
-        padding: 1rem 3rem;
+    &--orange:link, &--orange:visited{
         background-color: rgba($color-white, 0);
         border: 2px solid $color-white;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: inherit;
-        transition: all .2s;
     }
 
     &--orange:hover{
@@ -30,19 +37,8 @@
         color: $color-logo-orange;
     }
 
-    &--orange:link,&--orange:visited{
-        padding: 1rem 3rem;
-        background-color: rgba($color-white, 0);
-        border: 2px solid $color-white;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: inherit;
-        transition: all .2s;
+    &--green {
+        background-color: $color-logo-green;
+        color: $color-white;
     }
-
-    &--orange:hover{
-        background-color: rgba($color-white, 1);
-        color: $color-logo-orange;
-    }
-    
 }
