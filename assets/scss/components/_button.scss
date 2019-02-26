@@ -22,7 +22,7 @@
         border: 2px solid $color-white;
     }
 
-    &--blue:hover{
+    &--blue:hover, &--blue:active{
         background-color: rgba($color-white, 1);
         color: $color-logo-blue;
     }
@@ -32,7 +32,7 @@
         border: 2px solid $color-white;
     }
 
-    &--orange:hover{
+    &--orange:hover, &--orange:active{
         background-color: rgba($color-white, 1);
         color: $color-logo-orange;
     }
