@@ -15,13 +15,8 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed">
             {{#foreach posts}}
 
-<<<<<<< HEAD
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "image-box"}}
-=======
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
->>>>>>> 56a85c9598568bddcf7c1b0ed474bf1ef4ee7d87
 
             {{/foreach}}
         </div>
@@ -30,14 +25,17 @@ into the {body} of the default.hbs template --}}
 </main>
 <script>
     var navbar = document.querySelector(".navigation");
+    var header = document.querySelector(".site-header");
 
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             navbar.classList.add("navigation--min");
+            header.classList.add("header--sticky");
         }
         else {
             navbar.classList.remove("navigation--min");
+            header.classList.remove("header--sticky");
         }
     }
 </script>
