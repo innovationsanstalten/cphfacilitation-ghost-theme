@@ -1,8 +1,7 @@
 .navigation {
-    position: sticky;
-    top: 0;
     display: grid;
     grid-template-columns: 10fr 2fr;
+    transition: height .2s;
     &--left {
         display: flex;
         align-items: center;
@@ -12,10 +11,13 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 5rem;
+        padding-right: 1.5rem;
     }
     &__logo {
+        display: block;
         &--img {
+            padding: 1rem;
+            transition: all .2s;
             margin-right: 20px;
             height: 6rem;
         }
@@ -61,22 +63,31 @@
     
 }
 
-.inner {
-    position: sticky;
-    top: 0;
-}
 
-.navigation--min {
+
+.navigation--min{
     background-color: $color-white;
 
+    .navigation__logo {
+        margin-top: 1rem;
+    }
+    .navigation__logo--img {
+        height: 5.5rem;
+    }
     .navigation__find-us {
         color: $color-black;
         writing-mode: horizontal-tb;
         top: 0;
-
+        padding-right: 1rem;
     }
     .navigation__link--social {
         color: $color-black;
         border: 1px solid $color-black;
+        padding: .2rem .8rem;
+    }
+    .navigation--right {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        padding-right: 4rem;
     }
 }
