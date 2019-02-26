@@ -7,7 +7,7 @@ into the {body} of the default.hbs template --}}
     {{> "site-nav"}}
 </div>
 </header>
-{{!-- {{> floating-header}} --}}
+
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -33,7 +33,7 @@ into the {body} of the default.hbs template --}}
 
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             navbar.classList.add("navigation--min");
         }
         else {
