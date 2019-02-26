@@ -1,0 +1,13 @@
+.contact {
+    background: url("https://daks2k3a4ib2z.cloudfront.net/58c9aebaa118f71a388bce36/594e8a82f16a201887472cfb_baeredygtigelokalsamfund.jpg") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    &__box {
+        &--white {
+
+        }
+        &--green {
+            background-color: $color-logo-green;
+        }
+    }
+}
