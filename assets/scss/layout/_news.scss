@@ -22,24 +22,11 @@
     }
 
 
-    &--button, :visited {
-        letter-spacing: .1rem;
-        background-color: $color-logo-orange;
-        color: $color-white;
+  .button:link, .button:visited {
+        
+       
         grid-row: 3;
         grid-column: 10;
-        height: 70%;
-        
-        
-        border: solid $color-white 1px;
-        align-self: center;
-       
-
-        &:hover, :active {
-            cursor: pointer;
-            box-shadow: .1rem  .1rem .6rem rgba(0, 0, 0, 0.192);
-            
-        }
     }
 
     
@@ -109,4 +96,82 @@
         margin: 0rem 1rem 0rem 1rem;     
     }
 
+
+    @media (max-width: 600px) {
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 8rem 1fr 1fr 1fr 8rem ;
+        position: relative;
+
+        
+        
+        
+        
+        &:before{
+            grid-column: 1;
+            
+            grid-row-start: 1;
+            grid-row-end: 6;
+            
+            margin-left: 0;
+            
+            
+            
+            
+        }
+
+        &--1 {
+        
+            position: relative;
+            grid-column: 1;
+            grid-row: 2;
+            left: 4.8rem;
+            margin: 0rem 1rem 0rem 1rem;
+    
+        }
+    
+        &--2{
+            
+            position: relative;
+            grid-column: 1;
+            
+            grid-row: 3;
+            left: 4.8rem;
+            margin: 0rem 1rem 0rem 1rem;    
+        }
+    
+        &--3{
+            
+            position: relative;
+            grid-column: 1;
+            
+            grid-row: 4;
+            left: 4.8rem;
+            margin: 0rem 1rem 0rem 1rem;     
+        }
+
+
+        &__header {
+            position: absolute;
+            top: none;
+            left:none;
+            grid-column-start: 1;
+            grid-row: 1;
+            
+            letter-spacing: .1rem;
+            color: $color-white;
+    
+        }
+
+
+        .button:link, .button:visited {
+        
+       
+            grid-row: 5;
+            grid-column: 1;
+            align-self: center;
+        }
+    }
+
+  
 }
