@@ -16,7 +16,7 @@
     &__logo {
         display: block;
         &--img {
-            padding: 1rem;
+            padding-top: 1rem;
             transition: all .2s;
             margin-right: 20px;
             height: 6rem;
@@ -49,8 +49,8 @@
             padding: 5px 10px;
             margin: 0 10px;
             text-decoration: none;
-            color: $color-black;
-            border: 1px solid $color-black;
+            color: $color-white;
+            border: 1px solid $color-white;
         }
     }
     &__find-us {
@@ -73,7 +73,7 @@
     }
     .navigation__logo--img {
         height: 5rem;
-        padding: 0;
+        padding-top: .5rem;
         margin-right: 20px;
     }
     .navigation__find-us {
