@@ -9,12 +9,14 @@
     </div>
 
     <div class="temaer__right">
-        {{#foreach posts}}
+        {{#get "posts" filter="tags:tema" include="tags"}}
+        {{#foreach posts limit=6}}
             {{#has tag="tema, Tema"}}
                 <article class="temaer__box">
                     {{> "image-box"}}
                 </article>
             {{/has}}
         {{/foreach}}
+        {{/get}}
     </div>
 </section>
