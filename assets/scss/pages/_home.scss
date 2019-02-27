@@ -11,6 +11,10 @@
     }
     &--extended {
         padding-top: 6.3rem;
+
+        &::after{
+            display: none;
+        }
     }
 }
 
