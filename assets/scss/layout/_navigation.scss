@@ -47,7 +47,7 @@
             text-decoration: none;
             color: $color-white;
             border: 1px solid $color-white;
-
+            z-index: 1;
         }
     }
     &__find-us {
@@ -64,6 +64,9 @@
 
 .navigation--min{
     background-color: $color-white;
+    transition: background-color .5s;
+    transition-delay: .5s;
+    z-index: 1;
 
     .navigation__logo {
         margin-top: 1rem;

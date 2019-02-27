@@ -1,19 +1,20 @@
 .site-wrapper {
     &::after {
-        z-index: -1;
         content: "";
+        z-index: -1;
         width: 25vw;
         height: 50vh;
         background-color: $color-logo-green;
         position: absolute;
         top: 0;
         right: 0;
+        transition: height 1s;
     }
     &--extended {
         padding-top: 6.3rem;
 
         &::after{
-            display: none;
+            height: 10vh;
         }
     }
 }
