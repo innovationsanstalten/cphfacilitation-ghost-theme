@@ -22,28 +22,37 @@
         right: 0;
         bottom: 0;
         z-index: 20;
-        
+        overflow: hidden;
         &:hover div {
-            transform: translateY(2rem);
+            
+            transform: translateY(4rem);
             opacity: 1;
+            
+            p {
+                visibility: visible;
+            }
         }
 
         &:hover h2 {
-            transform: translateY(0);
+            transform: translateY(4rem);
+           
         }
 
         &:hover .image-container {
             transform: translateY(0);
             opacity: 1;
         }
+
+        
         
     }
 
     &__title {
         color: white;
         text-align: center;
-        transform: translateY(8rem);
+        transform: translateY(9rem);
         transition: all .5s;
+        margin: 0 2rem;
     }
 
     &__content {
@@ -53,19 +62,25 @@
             height: 50px;
             width: 50px;
         }
-        
+        visibility: hidden;
         color: white;
         opacity: 0;
         z-index: 21;
         padding: 2rem;
         transform: translateY(20rem);
         transition: all .5s;
+        
+        
+        p {
+            visibility: hidden;
+            transition: all .5s;
+        }
     }
 }
 
 .image-container {
     position: absolute;
-    
+    height: 50px;
     opacity: 0;
     transition: all .5s;
     bottom: 0.5rem;
