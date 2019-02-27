@@ -1,8 +1,7 @@
 {
-    "name": "casper",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://demo.ghost.io",
-    "version": "2.9.1",
+    "name": "cphfacilitation",
+    "description": "Ghost theme made for cphfacilitation by innovationsanstalten",
+    "version": "0.8",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -18,9 +17,8 @@
         "test": "gscan ."
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "innovationsanstalten",
+        "email": "kljo@aspit.dk"
     },
     "gpm": {
         "type": "theme",
@@ -31,15 +29,14 @@
     },
     "keywords": [
         "ghost",
-        "theme",
-        "ghost-theme"
+        "theme"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/innovationsanstalten/cphfacilitation-ghost-theme.git"
     },
-    "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "bugs": "https://github.com/innovationsanstalten/cphfacilitation-ghost-theme/issues",
+    "contributors": "https://github.com/innovationsanstalten/cphfacilitation-ghost-theme/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "beeper": "^1.1.1",
