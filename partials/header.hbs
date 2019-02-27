@@ -1,5 +1,38 @@
 <header class="site-header">
 
-{{> "site-nav"}}
+    {{> "site-nav"}}
 
+    {{#post}}
+    {{#has tag="SmallHeader"}}
+    <script>
+        var navbar = document.querySelector(".navigation");
+        var header = document.querySelector(".site-header");
+        var wrapper = document.querySelector(".site-wrapper");
+
+                navbar.classList.add("navigation--min");
+                header.classList.add("header--sticky");
+                wrapper.classList.add("site-wrapper--extended");
+    </script>
+    {{else}}
+    <script>
+        var navbar = document.querySelector(".navigation");
+        var header = document.querySelector(".site-header");
+        var wrapper = document.querySelector(".site-wrapper");
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                navbar.classList.add("navigation--min");
+                header.classList.add("header--sticky");
+                wrapper.classList.add("site-wrapper--extended");
+            }
+            else {
+                navbar.classList.remove("navigation--min");
+                header.classList.remove("header--sticky");
+                wrapper.classList.remove("site-wrapper--extended");
+            }
+        }
+    </script>
+    {{/has}}
+    {{/post}}
 </header>
