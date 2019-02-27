@@ -1,14 +1,14 @@
 .button {
-    padding: 1rem 3rem;
+    padding: 0.5rem 3rem;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all .2s;
     color: $color-white;
     border-radius: $border-radius-default;
     cursor: pointer;
+    display: inline-block;
 
     &:link, &:visited {
-        padding: 1rem 3rem;
         font-size: 1.5rem;
         text-decoration: none;
         transition: all .2s;
