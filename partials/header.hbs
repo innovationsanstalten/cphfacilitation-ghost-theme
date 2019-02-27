@@ -1,8 +1,20 @@
 <header class="site-header">
 
-{{> "site-nav"}}
+    {{> "site-nav"}}
 
-<script>
+    {{#post}}
+    {{#has tag="SmallHeader"}}
+    <script>
+        var navbar = document.querySelector(".navigation");
+        var header = document.querySelector(".site-header");
+        var wrapper = document.querySelector(".site-wrapper");
+
+                navbar.classList.add("navigation--min");
+                header.classList.add("header--sticky");
+                wrapper.classList.add("site-wrapper--extended");
+    </script>
+    {{else}}
+    <script>
         var navbar = document.querySelector(".navigation");
         var header = document.querySelector(".site-header");
         var wrapper = document.querySelector(".site-wrapper");
@@ -21,5 +33,6 @@
             }
         }
     </script>
-    
+    {{/has}}
+    {{/post}}
 </header>
