@@ -74,7 +74,7 @@
         font-size: $font-size-large;
         justify-self: center;
         align-self: center;
-        margin-left: 4rem;
+        
         
         
         
@@ -233,7 +233,7 @@
     @media (max-width: 800px) {
         grid-gap: 0rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 6rem 35rem 35rem 35rem 6rem;
+        grid-template-rows: 8rem 30rem 30rem 30rem 8rem;
         position: relative;
         width: 100%;
         
@@ -275,7 +275,6 @@
 
         &--1 {
             border-top: 1px solid rgb(0, 0, 0);
-            border-bottom: 1px solid rgb(0, 0, 0);
             position: relative;
             grid-column: 1;
             grid-row: 2;
@@ -286,7 +285,6 @@
     
         &--2{
             border-top: 1px solid rgb(0, 0, 0);
-            border-bottom: 1px solid rgb(0, 0, 0);
             position: relative;
             grid-column: 1;
             grid-row: 3;
