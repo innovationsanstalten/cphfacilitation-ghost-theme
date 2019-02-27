@@ -57,12 +57,24 @@
         max-height: 35rem;
         resize: vertical;
         border: 1px solid $color-logo-grey;
+        font-size: $font-size-default;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
         padding: 3px;
         &::placeholder {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             line-height: 1.7;
             font-size: 1.6rem;
+        }
+        &:invalid {
+            box-shadow: none;
+            outline: none;
+            border: 2px solid $color-logo-orange;
+        }
+        &:valid {
+            border: 2px solid $color-logo-green;
         }
     }
     &__input-box {
