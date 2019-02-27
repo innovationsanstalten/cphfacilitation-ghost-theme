@@ -79,6 +79,7 @@
         border: none;
         border-bottom: 1px solid $color-logo-grey;
         transition: all .2s;
+        font-size: $font-size-default;
         &:focus {
             border-bottom: 2px solid $color-logo-blue;
         }
