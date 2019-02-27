@@ -50,7 +50,7 @@
         }
     }
     &__find-us {
-        writing-mode: vertical-rl;
+        transform: rotate(90deg);
         top: 2rem;
         position: relative;
         color: $color-white;
@@ -73,6 +73,7 @@
     }
     .navigation__find-us {
         color: $color-black;
+        transform: rotate(0);
         writing-mode: horizontal-tb;
         top: 0;
         padding-right: 1rem;
