@@ -1,20 +1,28 @@
 <nav class="navigation">
-    <div class="navigation--left">
 
-        {{#if @site.logo}}
-        <a class="navigation__logo--link" href="{{@site.url}}"><img class="navigation__logo--img" src="{{@site.logo}}"
-                alt="{{@site.title}}" /></a>
-        {{else}}
-        <a class="navigation__logo--link" href="{{@site.url}}">{{@site.title}}</a>
-        {{/if}}
+    {{#if @site.logo}}
+    <a class="navigation__logo--link" href="{{@site.url}}"><img class="navigation__logo--img" src="{{@site.logo}}"
+            alt="{{@site.title}}" /></a>
+    {{else}}
+    <a class="navigation__logo--link" href="{{@site.url}}">{{@site.title}}</a>
+    {{/if}}
+    <input type="checkbox" class="navigation__burger--checkbox" id="navigation__burger--checkbox">
+    <label for="navigation__burger--checkbox" class="navigation__burger--button">
+        <span class="navigation__burger--icon">
+            Menu
+        </span>
+    </label>
 
-        {{#if @site.navigation}}
-        {{navigation}}
-        {{/if}}
-    </div>
-    <div class="navigation--right">
-        <a class="navigation__link--social socail__linkedin" href="https://dk.linkedin.com/company/cphfacilitation">In</a>
-        <p class="navigation__find-us">Find os på</p>
-    </div>
+        <div class="navigation--left">
+            {{#if @site.navigation}}
+            {{navigation}}
+            {{/if}}
+        </div>
+
+        <div class="navigation--right">
+            <a class="navigation__link--social socail__linkedin"
+                href="https://dk.linkedin.com/company/cphfacilitation">In</a>
+            <p class="navigation__find-us">Find os på</p>
+        </div>
 
 </nav>

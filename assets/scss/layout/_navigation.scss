@@ -1,6 +1,6 @@
 .navigation {
     display: grid;
-    grid-template-columns: 10fr 2fr;
+    grid-template-columns: 1fr 8fr 2fr;
     white-space: nowrap;
     transition: height .2s;
     &--left {
@@ -57,12 +57,17 @@
         color: $color-white;
         transition: all .5s;
     }
-    
+    &__burger {
+        &--checkbox {
+            display: none;
+        }
+        &--button {
+            display: none;
+        }
+    }
 }
 
-
-
-.navigation--min{
+.navigation--min {
     background-color: $color-white;
     transition: background-color .5s;
     transition-delay: .5s;
@@ -73,6 +78,7 @@
     }
     .navigation__logo--img {
         height: 5rem;
+        z-index: 999;
         padding: 1rem 2rem 0;
     }
     .navigation__find-us {
@@ -84,11 +90,77 @@
     }
     .navigation__link--social {
         color: $color-black;
-        border: 1px solid $color-black;
-        // padding: .2rem .8rem;
+        border: 1px solid $color-black; // padding: .2rem .8rem;
     }
     .navigation--right {
         justify-content: flex-start;
         flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .navigation {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "logo menu" "link link" "social social";
+        width: 100%;
+        height: 63px;
+        &--left {
+            visibility: hidden;
+            opacity: 0;
+            grid-area: link;
+            width: 100%;
+        }
+        &--right {
+            visibility: hidden;
+            opacity: 0;
+            grid-area: social;
+        }
+        &__burger {
+            &--button {
+                display: inline-block;
+                width: 5rem;
+                padding: 1.7rem;
+                height: 6.3rem;
+                justify-self: end;
+                align-self: center;
+            }
+        }
+        &__burger--checkbox:checked~&--left,
+        &__burger--checkbox:checked~&--right {
+            position: relative;
+            bottom: 4rem;
+            visibility: visible;
+            background-color: $color-white;
+            opacity: 1;
+        }
+        &__burger--checkbox:checked~&--left {
+            .navigation__list {
+                flex-direction: column;
+                width: 100%;
+            }
+            .navigation__link {
+                margin-top: 1rem;
+            }
+        }
+        &__burger--checkbox:checked~&--right {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column-reverse;
+            padding-bottom: 2rem;
+        }
+        .navigation__find-us {
+            transform: rotate(0) !important;
+            color: black;
+            font-size: 2rem;
+            top: 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .navigation__link--social {
+            color: $color-black;
+            border: 1px solid $color-black;
+            margin-top: 2rem;
+        }
     }
 }

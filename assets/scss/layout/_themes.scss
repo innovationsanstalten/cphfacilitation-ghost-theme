@@ -101,6 +101,8 @@
 
 @media (max-width: 900px) {
     .temaer {
+        width: 90vw;
+
         &::before {
             width: 100%;
             height: 100%;
@@ -154,8 +156,6 @@
 
 @media (max-width: 600px) {
     .temaer {
-        width: 90vw;
-
         &__left {
             padding: 3rem;
         }
@@ -202,6 +202,8 @@
 
 @media (max-width: 400px) {
     .temaer {
+        width: 100vw;
+
         &__button:link, &__button:visited {
             padding: 0.5rem 0;
             width: 100%;
