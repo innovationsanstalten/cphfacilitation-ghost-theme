@@ -12,60 +12,62 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
-                <section class="post-full-meta">
+                {{#if feature_image}}
+                <figure class="post-full-image ">
+                    {{!-- This is a responsive image, it loads different sizes depending on device
+                    https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+                    <img
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 800px) 400px,
+                                (max-width: 1170px) 700px,
+                                1400px"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{title}}"
+                    />
+                </figure>
+                {{/if}}
+
+                <h1 class="post-full-title">{{title}}</h1>
+
+                <section class="post-full-meta container-text">
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
                 </section>
-                <h1 class="post-full-title">{{title}}</h1>
             </header>
 
-            {{#if feature_image}}
-            <figure class="post-full-image">
-                {{!-- This is a responsive image, it loads different sizes depending on device
-                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-                <img
-                    srcset="{{img_url feature_image size="s"}} 300w,
-                            {{img_url feature_image size="m"}} 600w,
-                            {{img_url feature_image size="l"}} 1000w,
-                            {{img_url feature_image size="xl"}} 2000w"
-                    sizes="(max-width: 800px) 400px,
-                            (max-width: 1170px) 700px,
-                            1400px"
-                    src="{{img_url feature_image size="xl"}}"
-                    alt="{{title}}"
-                />
-            </figure>
-            {{/if}}
 
-            <section class="post-full-content">
+            <section class="post-full-content container-text">
                 <div class="post-content">
                     {{content}}
                 </div>
             </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.subscribers}}
+            {{!-- {{#if @labs.subscribers}}
             <section class="subscribe-form">
                 <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
                 <p>Get the latest posts delivered right to your inbox</p>
                 {{subscribe_form placeholder="youremail@example.com"}}
             </section>
-            {{/if}}
+            {{/if}} --}}
 
             <footer class="post-full-footer">
-
+<h1>POST-full footer</h1>
                 {{!-- There are two options for how we display the byline/author-info.
                 If the post has more than one author, we load a specific template
                 from includes/byline-multiple.hbs, otherwise, we just use the
                 default byline. --}}
 
-                {{#has author="count:>1"}}
+                {{!-- {{#has author="count:>1"}}
                     {{> "byline-multiple"}}
                 {{else}}
                     {{> "byline-single"}}
-                {{/has}}
+                {{/has}} --}}
 
             </footer>
 
