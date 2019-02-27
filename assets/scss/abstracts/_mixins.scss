@@ -1,4 +1,3 @@
 @mixin button-shadow {
-    // box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
-    box-shadow: 0 0.8rem 1.6rem 0 rgba($color-black, 0.2), 0 0.6rem 2rem 0 rgba($color-black, 0.19);
+    box-shadow: 0.5rem 0.8rem 1.6rem 0 rgba($color-black, 0.2), 0.5rem 0.6rem 2rem 0 rgba($color-black, 0.19);
 }
