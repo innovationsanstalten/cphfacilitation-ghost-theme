@@ -4,7 +4,7 @@
     text-decoration: none;
     transition: all .2s;
     color: $color-white;
-    border-radius: $border-radius-default;
+    // border-radius: $border-radius-default;
     cursor: pointer;
     display: inline-block;
 
@@ -21,7 +21,7 @@
 
     &--blue:link, &--blue:visited{
         background-color: rgba($color-white, 0);
-        border: 2px solid $color-white;
+        border: 1px solid $color-white;
     }
 
     &--blue:hover, &--blue:active{
@@ -31,7 +31,7 @@
 
     &--orange:link, &--orange:visited{
         background-color: rgba($color-white, 0);
-        border: 2px solid $color-white;
+        border: 1px solid $color-white;
     }
 
     &--orange:hover, &--orange:active{
@@ -43,7 +43,7 @@
         background-color: rgba($color-logo-green, 0);
         color: $color-logo-green;
         box-shadow: none;
-        border: 2px solid $color-logo-green;
+        border: 1px solid $color-logo-green;
         padding: 1.5rem 7rem;
         
         &:hover, &:active {
