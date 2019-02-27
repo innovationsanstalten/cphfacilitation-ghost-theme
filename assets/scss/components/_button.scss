@@ -40,8 +40,14 @@
     }
 
     &--green {
-        background-color: $color-logo-green;
+        background-color: rgba($color-logo-green, 1);
         color: $color-white;
-        border: none;
+        border: 2px solid $color-logo-green;
+        padding: 1.5rem 7rem;
+
+        &:hover, &:active {
+            background-color: rgba($color-logo-green, 0);
+            color: $color-logo-green;
+        }
     }
 }
