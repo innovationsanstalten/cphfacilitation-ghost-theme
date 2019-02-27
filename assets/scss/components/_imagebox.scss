@@ -24,12 +24,13 @@
         z-index: 20;
         
         &:hover div {
-            transform: translateY(2rem);
+            transform: translateY(4rem);
             opacity: 1;
         }
 
         &:hover h2 {
-            transform: translateY(0);
+            transform: translateY(4rem);
+           
         }
 
         &:hover .image-container {
@@ -42,8 +43,9 @@
     &__title {
         color: white;
         text-align: center;
-        transform: translateY(8rem);
+        transform: translateY(12rem);
         transition: all .5s;
+        margin: 0 2rem;
     }
 
     &__content {
@@ -65,7 +67,7 @@
 
 .image-container {
     position: absolute;
-    
+    height: 50px;
     opacity: 0;
     transition: all .5s;
     bottom: 0.5rem;
