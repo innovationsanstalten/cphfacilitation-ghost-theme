@@ -7,11 +7,12 @@
                     <p>{{excerpt words="33"}}</p>
                 </div>
                 <div class="image-container">
-                {{#get "tags" filter="slug:[1, 2, 3, 4, 5, 6, 7, 8, 9 ,10 , 11, 12, 13, 14, 15, 16, 17]"}}
-                {{#foreach tags limit=8}}
+                
+                {{#foreach tags }}
+                {{#if feature_image}}
                 <img class="image-container__small-picture" src="./assets/img/{{name}}.gif" alt="asd">
+                {{/if}}
                 {{/foreach}}
-                {{/get}}
             </div>
             </div>
         </a>
