@@ -56,3 +56,23 @@ h5{
 }
 
 small, .text_small {font-size: 0.75em;}
+
+blockquote{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-left: 5px solid #e2e2e2;
+    color: #666;
+    // font-size: 20px;
+    // line-height: 22px;
+    font-style: italic;
+}
+
+.post-content{
+    ul {
+        margin: 2rem;
+
+        li{
+            margin: 1rem;
+        }
+    }
+}
