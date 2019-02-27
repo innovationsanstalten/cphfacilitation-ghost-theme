@@ -9,7 +9,7 @@
     &__left {
         grid-column-start: 1;
         grid-row: 2/3;
-        padding: 0 4rem 4rem 6rem;
+        padding: 0 4rem 4rem 4rem;
     }
 
     &__right {
@@ -32,8 +32,9 @@
     }
 
     &__title {
-        font-size: $font-size-large;
-        margin-bottom: 5rem;
+        // font-size: $font-size-large;
+        margin-bottom: 4rem;
+        margin-top: 0;
     }
 
     &__paragraph {
