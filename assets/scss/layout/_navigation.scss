@@ -1,6 +1,7 @@
 .navigation {
     display: grid;
     grid-template-columns: 1fr 8fr 2fr;
+    white-space: nowrap;
     transition: height .2s;
     &--left {
         display: flex;

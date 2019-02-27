@@ -4,3 +4,34 @@
     top: 0;
     z-index: 99;
 }
+
+.head-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 12rem);
+}
+
+.company-name {
+    grid-column:4/9;
+   grid-row: 2/3;
+   
+}
+
+.un-goal {
+    grid-column: 3/7;
+    grid-row: 5/8;
+    display: flex;
+    align-items: center;
+    background-color: #19486A;
+    color: white;
+    padding: 0 2rem;
+
+    p {
+        margin: 2rem;
+    }
+}
+
+.head-image-wrapper {
+    grid-column: 10/13;
+    grid-row: 2/6;
+}
