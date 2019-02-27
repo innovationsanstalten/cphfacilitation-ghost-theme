@@ -48,6 +48,7 @@
         &:hover, &:active {
             background-color: rgba($color-logo-green, 0);
             color: $color-logo-green;
+            box-shadow: none;
         }
     }
 }
