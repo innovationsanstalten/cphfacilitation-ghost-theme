@@ -44,6 +44,7 @@
         color: $color-white;
         border: 2px solid $color-logo-green;
         padding: 1.5rem 7rem;
+        @include button-shadow;
 
         &:hover, &:active {
             background-color: rgba($color-logo-green, 0);
