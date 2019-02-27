@@ -40,16 +40,16 @@
     }
 
     &--green {
-        background-color: rgba($color-logo-green, 1);
-        color: $color-white;
+        background-color: rgba($color-logo-green, 0);
+        color: $color-logo-green;
+        box-shadow: none;
         border: 2px solid $color-logo-green;
         padding: 1.5rem 7rem;
-        @include button-shadow;
-
+        
         &:hover, &:active {
-            background-color: rgba($color-logo-green, 0);
-            color: $color-logo-green;
-            box-shadow: none;
+            background-color: rgba($color-logo-green, 1);
+            color: $color-white;
+            @include button-shadow;
         }
     }
 }
