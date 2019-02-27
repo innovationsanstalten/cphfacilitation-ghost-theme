@@ -74,7 +74,7 @@
         font-size: $font-size-large;
         justify-self: center;
         align-self: center;
-        margin-left: 4rem;
+        
         
         
         
@@ -226,9 +226,9 @@
 
 
     @media (max-width: 800px) {
-        grid-gap: 0rem;
+        grid-gap: 1em;
         grid-template-columns: 1fr;
-        grid-template-rows: 6rem 35rem 35rem 35rem 6rem;
+        grid-template-rows: 8rem 30rem 30rem 30rem 8rem;
         position: relative;
         width: 100%;
         
