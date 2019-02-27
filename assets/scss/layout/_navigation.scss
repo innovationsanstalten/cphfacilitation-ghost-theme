@@ -73,6 +73,7 @@
     }
     .navigation__logo--img {
         height: 5rem;
+        z-index: 999;
         padding: 1rem 2rem 0;
     }
     .navigation__find-us {
@@ -114,12 +115,16 @@
             &--button {
                 display: inline-block;
                 width: 5rem;
+                padding: 1.7rem;
                 height: 6.3rem;
+                justify-self: end;
+                align-self: center;
             }
-            &--icon {}
         }
         &__burger--checkbox:checked~&--left,
         &__burger--checkbox:checked~&--right {
+            position: relative;
+            bottom: 4rem;
             visibility: visible;
             background-color: $color-white;
             opacity: 1;
@@ -131,8 +136,26 @@
             }
             .navigation__link {
                 margin-top: 1rem;
-                
             }
+        }
+        &__burger--checkbox:checked~&--right {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column-reverse;
+            padding-bottom: 2rem;
+        }
+        .navigation__find-us {
+            transform: rotate(0) !important;
+            color: black;
+            font-size: 2rem;
+            top: 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .navigation__link--social {
+            color: $color-black;
+            border: 1px solid $color-black;
+            margin-top: 2rem;
         }
     }
 }
