@@ -1,0 +1,20 @@
+{{!< default}}
+
+<main class="site-main">
+    <header class="nyheder__header">
+        <h1>Nyheder</h1>
+    </header>
+    
+    <section class="nyheder">
+        {{#get "posts" filter="tags:nyhed" include="tags"}}
+        {{#foreach posts limit=10}}
+        <article class="nyheder__item nyheder__item--{{@number}}">
+            {{> "image-box"}}
+        </article>
+        {{/foreach}}
+        {{/get}}
+
+    </section>
+</main>
+
+</div>

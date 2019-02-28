@@ -22,3 +22,8 @@
         margin-bottom: 20rem;
     }
 }
+@media only screen and (max-width: 700px) {
+    .site-wrapper::after {
+        display: none;
+    }
+}
