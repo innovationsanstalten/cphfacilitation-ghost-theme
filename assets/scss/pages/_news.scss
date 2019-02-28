@@ -1,0 +1,20 @@
+.nyheder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__header {
+        text-align: center;
+        margin: 10rem 0;
+    }
+    &__item:not(:first-child) {
+        margin-left: 4rem;
+    }
+    &__item {
+        width: 25%;
+        height: 400px;
+        .image-box {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
