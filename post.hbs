@@ -29,8 +29,13 @@ into the {body} of the default.hbs template --}}
                     />
                 </figure>
                 {{/if}}
+            </header>
 
-                <h1 class="post-full-title">{{title}}</h1>
+
+            <section class="post-full-content container-text">
+                <div class="post-full-title">
+                    <h1>{{title}}</h1>
+                </div>
 
                 <section class="post-full-meta container-text">
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
@@ -38,10 +43,7 @@ into the {body} of the default.hbs template --}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
                 </section>
-            </header>
 
-
-            <section class="post-full-content container-text">
                 <div class="post-content">
                     {{content}}
                 </div>
