@@ -1,10 +1,10 @@
 
 {{#get "posts" limit="5" filter="tags:[{{post.tags}}]+tags:nyhed+id:-{{post.id}}" include="tags" as |related|}}
-                {{#foreach related}}
-                <div class="related-posts__post">
-                    {{> "image-box"}}
-                </div>
-                {{/foreach}}
-                {{else}}
-                <p>No related posts</p>
-                {{/get}}
+    {{#foreach related}}
+        <div class="related-posts__post">
+            {{> "image-box"}}
+        </div>
+    {{/foreach}}
+    {{else}}
+    <p>Ingen relaterede nyheder</p>
+{{/get}}
