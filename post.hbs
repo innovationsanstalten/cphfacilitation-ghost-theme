@@ -37,17 +37,23 @@ into the {body} of the default.hbs template --}}
                     <h1>{{title}}</h1>
                 </div>
 
-                <section class="post-full-meta container-text">
-                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-                    {{#primary_tag}}
-                        <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
-                    {{/primary_tag}}
-                </section>
+                {{#has tag="Nyhed"}}
+                    <section class="post-full-meta container-text">
+                        <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                        {{#primary_tag}}
+                            <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+                        {{/primary_tag}}
+                    </section>
+                {{/has}}
 
                 <div class="post-content">
                     {{content}}
                 </div>
             </section>
+            <section class="related-posts">
+                {{> "related-posts"}}
+            </section>
+
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{!-- {{#if @labs.subscribers}}

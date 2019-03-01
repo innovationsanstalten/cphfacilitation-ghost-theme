@@ -1,0 +1,10 @@
+
+{{#get "posts" limit="5" filter="tags:{{post.tags}}" include="tags" as |related|}}
+    {{#foreach related}}
+        <div class="related-posts__post">
+            {{> "image-box"}}
+        </div>
+    {{/foreach}}
+{{else}}
+<p>No related posts</p>
+{{/get}}

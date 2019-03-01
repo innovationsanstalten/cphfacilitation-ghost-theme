@@ -6,8 +6,8 @@
     </header>
     
     <section class="nyheder">
-        {{#get "posts" filter="tags:nyhed" include="tags"}}
-        {{#foreach posts}}
+        {{#get "posts" filter="tags:nyhed" include="tags" as |nyhed|}}
+        {{#foreach nyhed}}
         <article class="nyheder__item nyheder__item--{{@number}}">
             {{> "image-box"}}
         </article>
@@ -16,5 +16,3 @@
 
     </section>
 </main>
-
-</div>
