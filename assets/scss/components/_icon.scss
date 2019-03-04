@@ -1,3 +1,10 @@
 .icon {
-    
+    display: inline-block;
+    fill: $color-black;
+    height: 2rem;
+    width: 4rem;
+
+    &__arrow--left {
+        transform: rotate(180deg);
+    }
 }
