@@ -1,0 +1,12 @@
+#site-main {
+    a {
+        &:link, &:visited {
+            color: $color-black;
+        }
+
+        &:hover, &:active {
+            color: $color-logo-green;
+            text-decoration: none;
+        }
+    }
+}
