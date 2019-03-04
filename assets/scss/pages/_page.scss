@@ -1,6 +1,6 @@
-.post-template {
+.page-template {
     .post-full-content {
-        padding: 0 2rem;
+        padding: 0 4rem;
         max-width: 130rem;
         margin: 0 auto;
         background-color: $color-white;
@@ -16,6 +16,7 @@
         max-width: 70rem;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 5rem;
     }
     
     .post-full-image {
@@ -30,45 +31,46 @@
     .post-full-title {
         margin-bottom: 2rem;
         padding-top: 2rem;
+        font-weight: 600;
     }
     
     .post-full-meta {
         margin-bottom: 5rem;
     }
     
-    .kg-image-card:not(.kg-width-wide):not(.kg-width-full) {
+    .kg-image-card {
         max-width: 70rem;
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    .kg-image-card .kg-width-full {
-        max-width: 100vw;
-    }
-    
-    .kg-image {
-        width: 100%;
+        text-align: center;
     }
     
     .kg-card figcaption {
         text-align: center;
+        margin-bottom: 3rem;
     }
     
     .kg-gallery-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1.5rem;
+        margin-bottom: 1.5rem;
     }
-
+    
     .kg-gallery-image {
-        margin: 1rem;
-        min-width: 25rem;
+        width: 100%;
+        height: 100%;
     
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
+    }
+
+    hr {
+        margin: 5rem 0;
+        border: none;
+        border-top: 1px solid rgba($color-black, .2);
     }
 }
