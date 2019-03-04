@@ -71,7 +71,7 @@
             z-index: 1;
             width: 2.5rem;
             // margin: 1rem;
-            width: 3rem;
+            // width: 3rem;
             svg{
                 padding: .3rem;
                 border: 1px solid $color-white;
@@ -125,10 +125,10 @@
         // border: 1px solid $color-black; // padding: .2rem .8rem;
         svg{
             padding: .3rem;
-            border: 1px solid gold;
+            border: 1px solid #333;
         }
         path{
-            fill: gold;
+            fill: #333;
         }
     }
     .navigation--right {

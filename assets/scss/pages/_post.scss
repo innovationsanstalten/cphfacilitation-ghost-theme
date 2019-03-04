@@ -72,4 +72,11 @@
           object-fit: cover;
         }
     }
+
+    .kg-embed-card {
+        text-align: center;
+        figcaption {
+            margin-bottom: 2rem;
+        }
+    }
 }
