@@ -1,10 +1,17 @@
 .icon {
     display: inline-block;
     fill: $color-black;
-    height: 2rem;
-    width: 4rem;
-
-    &__arrow--left {
-        transform: rotate(180deg);
+    &--white {
+        path {
+            fill: $color-white;
+        }
+        fill: $color-white;
+    }
+    &__arrow {
+        height: 2rem;
+        width: 2rem;
+        &--left svg{
+            transform: rotate(180deg);
+        }
     }
 }
