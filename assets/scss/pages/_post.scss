@@ -83,4 +83,17 @@
     blockquote>p:last-child{
         margin-bottom: 0;
     }
+
+    #site-main {
+        a {
+            &:link, &:visited {
+                color: $color-black;
+            }
+    
+            &:hover, &:active {
+                color: $color-logo-green;
+                text-decoration: none;
+            }
+        }
+    }
 }
