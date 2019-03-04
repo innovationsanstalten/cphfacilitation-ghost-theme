@@ -6,12 +6,11 @@
     </header>
     
     <section class="nyheder">
-        {{#get "posts" limit=@config.posts_per_page filter="tags:nyhed" include="tags" as |nyhed|}}
-        {{#foreach nyhed}}
+        {{#foreach posts}}
         <article class="nyheder__item nyheder__item--{{@number}}">
             {{> "image-box"}}
         </article>
         {{/foreach}}
-        {{/get}}
+        {{pagination}}
     </section>
 </main>
