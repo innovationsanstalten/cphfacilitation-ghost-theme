@@ -79,4 +79,8 @@
             margin-bottom: 2rem;
         }
     }
+
+    blockquote>p:last-child{
+        margin-bottom: 0;
+    }
 }
