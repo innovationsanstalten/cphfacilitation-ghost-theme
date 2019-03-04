@@ -1,4 +1,8 @@
+{{#is "index"}}
 <nav class="navigation">
+{{else}}
+<nav class="navigation navigation--min">
+{{/is}}
 
     {{#if @site.logo}}
     <a 
