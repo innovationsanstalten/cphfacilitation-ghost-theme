@@ -9,9 +9,8 @@
     }
     &--right {
         display: flex;
-        align-items: center;
         justify-content: flex-end;
-        padding-right: 1.5rem;
+        padding: 2rem 2rem 0 0;
     }
     &__logo {
         display: block;
@@ -42,17 +41,27 @@
         }
         &--social {
             display: inline-block;
-            padding: .5rem 1.1rem;
-            margin: 0 1rem;
+            // padding: .5rem 1.1rem;
+            // margin: 0 1rem;
             text-decoration: none;
-            color: $color-white;
-            border: 1px solid $color-white;
+            // color: $color-white;
             z-index: 1;
+            width: 2.5rem;
+            // margin: 1rem;
+            width: 3rem;
+            svg{
+                padding: .3rem;
+                border: 1px solid $color-white;
+            }
+            path{
+                fill: $color-white;
+            }
         }
     }
     &__find-us {
-        transform: rotate(90deg);
-        top: 2rem;
+        // transform: rotate(90deg);
+        // top: 2rem;
+        writing-mode: vertical-lr;
         position: relative;
         color: $color-white;
         transition: all .5s;
@@ -83,14 +92,21 @@
     }
     .navigation__find-us {
         color: $color-black;
-        transform: rotate(0);
+        // transform: rotate(0);
         writing-mode: horizontal-tb;
         top: 0;
         padding-right: 1rem;
     }
     .navigation__link--social {
-        color: $color-black;
-        border: 1px solid $color-black; // padding: .2rem .8rem;
+        // color: $color-black;
+        // border: 1px solid $color-black; // padding: .2rem .8rem;
+        svg{
+            padding: .3rem;
+            border: 1px solid gold;
+        }
+        path{
+            fill: gold;
+        }
     }
     .navigation--right {
         justify-content: flex-start;

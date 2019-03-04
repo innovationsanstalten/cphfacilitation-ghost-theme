@@ -4,13 +4,14 @@
     <header class="nyheder__header">
         <h1>Nyheder</h1>
     </header>
-    
+
     <section class="nyheder">
         {{#foreach posts}}
         <article class="nyheder__item nyheder__item--{{@number}}">
             {{> "image-box"}}
         </article>
         {{/foreach}}
-        {{pagination}}
     </section>
 </main>
+
+{{pagination}}
