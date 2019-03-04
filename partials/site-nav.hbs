@@ -1,8 +1,14 @@
 <nav class="navigation">
 
     {{#if @site.logo}}
-    <a class="navigation__logo--link" href="{{@site.url}}"><img class="navigation__logo--img" src="{{@site.logo}}"
-            alt="{{@site.title}}" /></a>
+    <a 
+        class="navigation__logo--link" 
+        href="{{@site.url}}">
+            <img class="navigation__logo--img" 
+                src="{{@site.logo}}"
+                alt="{{@site.title}}" 
+            />
+    </a>
     {{else}}
     <a class="navigation__logo--link" href="{{@site.url}}">{{@site.title}}</a>
     {{/if}}
@@ -21,7 +27,7 @@
 
         <div class="navigation--right">
             <a class="navigation__link--social socail__linkedin"
-                href="https://dk.linkedin.com/company/cphfacilitation">In</a>
+                href="https://dk.linkedin.com/company/cphfacilitation">{{>"icons/linkedin"}}</a>
             <p class="navigation__find-us">Find os på</p>
         </div>
 
