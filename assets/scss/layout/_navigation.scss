@@ -31,14 +31,36 @@
         margin: 0 1rem;
         text-decoration: none;
         color: $color-black;
-        border-bottom: 2px solid transparent;
-        &:hover {
-            border-bottom: 2px solid $color-logo-orange;
+        
+        transition: all .3s;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: $color-logo-green;
+            margin-top: .5rem;
+
+            transition: all .3s;
         }
+
+        &:hover {
+            color: $color-logo-green;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
         &--current {
             color: $color-logo-green;
-            border-bottom: 2px solid $color-logo-green;
+
+            &::after {
+                width: 100%;
+            }
         }
+
         &--social {
             display: inline-block;
             // padding: .5rem 1.1rem;
@@ -48,7 +70,7 @@
             z-index: 1;
             width: 2.5rem;
             // margin: 1rem;
-            width: 3rem;
+            // width: 3rem;
             svg{
                 padding: .3rem;
                 border: 1px solid $color-white;
@@ -102,10 +124,10 @@
         // border: 1px solid $color-black; // padding: .2rem .8rem;
         svg{
             padding: .3rem;
-            border: 1px solid gold;
+            border: 1px solid #333;
         }
         path{
-            fill: gold;
+            fill: #333;
         }
     }
     .navigation--right {
