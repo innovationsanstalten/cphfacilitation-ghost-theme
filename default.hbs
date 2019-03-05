@@ -16,15 +16,18 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
     {{!-- Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
 </head>
 
 <body class="{{body_class}}">
-
+    {{#is "index"}}
+    <div class="site-wrapper site-wrapper--green-box">
+    {{else}}
     <div class="site-wrapper">
+    {{/is}}
         {{> header}}
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
@@ -58,14 +61,35 @@
     <script src="{{asset "built/infinitescroll.js"}}"></script>
     {{/if}}
 
+    {{#is "index"}}
+    <script>
+        var navbar = document.querySelector(".navigation");
+        var header = document.querySelector(".site-header");
+        var wrapper = document.querySelector(".site-wrapper");
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                navbar.classList.add("navigation--min");
+                header.classList.add("header--sticky");
+                wrapper.classList.add("site-wrapper--extended");
+            }
+            else {
+                navbar.classList.remove("navigation--min");
+                header.classList.remove("header--sticky");
+                wrapper.classList.remove("site-wrapper--extended");
+            }
+        }
+    </script>
+    {{/is}}
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-    
 
-   
+
+
 </body>
 
 </html>
