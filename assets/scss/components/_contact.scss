@@ -1,15 +1,36 @@
 .contact {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/ContactBG.jpeg") no-repeat;
+    background: rgba($color-black, .7);
     background-size: cover;
     width: 100%;
-    height: 95vh;
+    height: calc(100vh - 6.5rem);
+    margin-top: 6.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+
+    &__background {
+        width: 100%;
+        // height: 100%;
+        height: calc(100vh - 6.5rem);
+        margin-top: 6.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+
+        user-drag: none; 
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
     &__box {
         width: 70%;
-        height: 70vh;
+        height: 60rem;
         box-sizing: border-box;
         display: flex;
         &--white {
@@ -52,9 +73,9 @@
         margin: auto;
         display: block;
         width: 100%;
-        height: 20rem;
-        min-height: 3rem;
-        max-height: 35rem;
+        height: 15rem;
+        min-height: 3.8rem;
+        max-height: 22rem;
         resize: vertical;
         border: 1px solid $color-logo-grey;
         font-size: $font-size-default;
@@ -62,6 +83,7 @@
         font-weight: 400;
         line-height: 1.7;
         padding: 3px;
+        box-sizing: border-box;
         &::placeholder {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
@@ -121,6 +143,7 @@
         border: 1px solid $color-white;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     .contact {
         height: 100rem;
@@ -176,6 +199,15 @@
     .contact {
         &__box {
             width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+
+            &--green {
+                height: 100%;
+            }
         }
         &__form {
             width: 80%;
