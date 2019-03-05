@@ -1,6 +1,6 @@
 .nyheder {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: auto;
     grid-gap: 2rem;
     width: 80%;
@@ -16,4 +16,18 @@
             width: 100%;
         }
     }
+}
+
+@media (max-width: 1300px) {
+    .nyheder {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+
+}
+
+@media (max-width: 800px) {
+    .nyheder {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+
 }
