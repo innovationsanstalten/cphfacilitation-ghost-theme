@@ -48,7 +48,12 @@ into the {body} of the default.hbs template --}}
             </section>
             {{/post}}
             <section class="related-posts">
-                {{> "related-posts"}}
+                <h2 class="related-posts__header">Relaterede nyheder</h2>
+                <div class="related-posts__box">
+                    {{> "related-posts"}}
+                </div>
+
+                
             </section>
 
 
@@ -89,4 +94,3 @@ into the {body} of the default.hbs template --}}
 
 
 {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
-
