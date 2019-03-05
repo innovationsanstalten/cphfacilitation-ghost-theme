@@ -45,6 +45,9 @@
         &:hover .image-container {
             opacity: 1;
         }
+        &:hover .image-box__date {
+            color: $color-white;
+        }
 
         
         
@@ -72,6 +75,14 @@
             
             transition: all .5s;
         }
+    }
+    &__date {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transition: all .3s;
+        align-self: flex-start;
+        color: rgb(194, 194, 194);
     }
 }
 
