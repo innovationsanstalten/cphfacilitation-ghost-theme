@@ -213,6 +213,26 @@
                 -ms-grid-column-span: 1;
                 -ms-grid-row: 1;
                 -ms-grid-row-span: 1;
+
+                .image-box__title {
+                    transform: translateY(8rem);
+                    transition: all .5s;
+                }
+    
+                .image-box__content {
+                    transform: translateY(10rem);
+                    transition: all .5s;
+                }
+    
+                .image-box__overlay {
+                    &:hover h3 {
+                        transform: translateY(2rem);
+                    }
+    
+                    &:hover .image-box__content {
+                        transform: translateY(2rem);
+                    }
+                }
             }
     
             &:nth-child(2) {
