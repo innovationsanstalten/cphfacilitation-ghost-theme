@@ -1,0 +1,15 @@
+<div class="advisers">
+    {{#get "authors" as |advicer|}}
+    {{#foreach advicer}}
+        <div class="advisers__adviser">
+            {{#if profile_image}}
+            <img src="{{profile_image}}" alt="profil billet" class="advisers__profile-img">
+            {{/if}}
+            <h2 class="advisers__name">{{name}}</h2>
+            <h3 class="advisers__title">{{location}}</h3>
+            <a href="{{website}}" class="advisers__linkedin">LinkedIn</a>
+            <p class="advisers__bio">{{bio}}</p>
+        </div>
+    {{/foreach}}
+    {{/get}}
+</div>

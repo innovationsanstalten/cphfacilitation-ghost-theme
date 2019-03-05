@@ -2,4 +2,15 @@
     text-align: center;
     padding: 1rem 0;
     background-color: $color-white;
+
+    a {
+        &:link, &:visited {
+            color: $color-black;
+        }
+
+        &:hover, &:active {
+            color: $color-logo-green;
+            text-decoration: none;
+        }
+    }
 }
