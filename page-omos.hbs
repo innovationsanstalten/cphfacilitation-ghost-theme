@@ -23,11 +23,13 @@
       </section>
       <h2>Mød rådgiverne i cphfacilitation nedenfor.</h2>
       {{!-- Thomas Mosfeldt --}}
-      <img src="../assets/img/personer/594e937d2573a17a91f15b5d_thomas.jpg" alt="">
-      <h3>Thomas Mosfeldt</h3>
-      <p>Seniorrådgiver, Cand. techn. soc., HD-O</p>
+      {{#get "authors" filter="slug:thomas"}}
+      <img src="{{profile_image}}" alt="">
+      <h3>{{name}}</h3>
+      <p>{{location}}</p>
       <a href="mailto:tml@cfl.dk">tml@cfl.dk</a>
       <a href="https://www.linkedin.com/in/thomasmosfeldt">LinkedIn</a>
+      {{/get}}
       <p>Thomas Mosfeldt er optaget af at bygge bro mellem topledelsens og medarbejdernes dagligdag, og af at sikre, at
          uddannelse og træning skaber værdi.
          Han har i de seneste 10 år som rådgiver og konsulent arbejdet med at støtte, motivere og inspirere ledere og
@@ -37,11 +39,15 @@
          Thomas Mosfeldt interesserer sig særligt for samskabelsesdagsordenen og for medledelse som
          gevinstrealiseringsstrategi.</p>
       {{!-- >Hjarn v. Zernichow Borberg --}}
-      <img src="../assets/img/personer/594441b2c389bf3527eb81c8_2fa87cd.jpg" alt="">
-      <h3>Hjarn v. Zernichow Borberg</h3>
-      <p>Partner, administrationschef</p>
+      {{#get "authors" filter="slug:hjarn"}}
+      {{#foreach authors}}
+      <img src="{{profile_image}}" alt="">
+      <h3>{{name}}</h3>
+      <p>{{location}}</p>
       <a href="mailto:hjarn.borberg@cphfacilitation.dk">hjarn.borberg@cphfacilitation.dk</a>
-      <a href="https://www.linkedin.com/in/hjarn-zernichow-borberg-32172b1/?ppe=1">LinkedIn</a>
+      <a href="{{website}}">LinkedIn</a>
+      {{/foreach}}
+      {{/get}}
       <p>Hjarn v. Zernichow Borberg er cand.polit. og bl.a. forfatter og ekstern lektor på Økonomisk Institut,
          Københavns Universitet.
          Hjarn har i mange år været ansat i flere forskellige funktioner og chefstillinger på Undervisningsministeriets,
