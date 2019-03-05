@@ -1,0 +1,16 @@
+.pagination {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    &__newer-posts {
+        position: relative;
+        top: 3px;
+    }
+    &__page-number {
+
+    }
+    &__older-posts {
+        position: relative;
+        top: 3px;
+    }
+}

@@ -1,15 +1,4 @@
 .site-wrapper {
-    &::after {
-        content: "";
-        z-index: -1;
-        width: 25vw;
-        height: 50vh;
-        background-color: $color-logo-green;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: height 1s;
-    }
     &--extended {
         padding-top: 6.3rem;
 
@@ -20,6 +9,19 @@
     .section__news, .temaer {
         margin-top: 20rem;
         margin-bottom: 20rem;
+    }
+}
+.site-wrapper--green-box {
+    &::after {
+        content: "";
+        z-index: -1;
+        width: 25vw;
+        height: 50vh;
+        background-color: $color-logo-green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: height 1s;
     }
 }
 @media only screen and (max-width: 700px) {

@@ -123,6 +123,8 @@
     .navigation__link--social {
         // color: $color-black;
         // border: 1px solid $color-black; // padding: .2rem .8rem;
+        position: relative;
+        bottom: 1px;
         svg{
             padding: .3rem;
             border: 1px solid #333;
