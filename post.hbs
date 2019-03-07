@@ -5,7 +5,20 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
-
+{{#contentFor "scripts"}}
+        
+    <script>
+       const path = window.location.pathname;
+       const temaer = document.getElementById("temaer");
+       const nyheder = document.getElementById("nyheder");
+       
+        if (path.substring(0,9) == "/nyheder/") {
+            nyheder.classList.add("current");
+        } else if (path.substring(0,8) == "/temaer/") {
+            temaer.classList.add("current");
+        }
+    </script>
+    {{/contentFor}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
