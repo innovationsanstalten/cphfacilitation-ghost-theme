@@ -1,12 +1,10 @@
 {{!< default}}
-
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 {{#contentFor "scripts"}}
-        
     <script>
        const path = window.location.pathname;
        const temaer = document.getElementById("temaer");
@@ -18,92 +16,84 @@ into the {body} of the default.hbs template --}}
             temaer.classList.add("current");
         }
     </script>
-    {{/contentFor}}
-<main id="site-main" class="site-main outer">
-    <div class="inner">
+{{/contentFor}}
 
-        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
-
-            <header class="post-full-header">
+<main id="site-main" class="main">
+    <article class="{{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+        
+        <header class="post__header--full">
+            <figure class="post__featured-img post__featured-img--full">
                 {{#if feature_image}}
-                <figure class="post-full-image ">
                     {{!-- This is a responsive image, it loads different sizes depending on device
                     https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-                    <img srcset="{{img_url feature_image size="s"}} 300w,
+                    <img ondragstart="return false" draggable="false" srcset="{{img_url feature_image size="s"}} 300w,
                                 {{img_url feature_image size="m"}} 600w,
                                 {{img_url feature_image size="l"}} 1000w,
                                 {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 800px) 400px,
                                 (max-width: 1170px) 700px,
                                 1400px" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
-                </figure>
                 {{/if}}
-            </header>
-
-
-            <section class="post-full-content container-text">
-                <div class="post-full-title">
+            </figure>
+                <div class="post__title">
+                    {{#primary_tag}}
+                         <span>{{name}}</span>
+                    {{/primary_tag}}
+                    {{#has tag="Nyhed"}}
+                    <span class="date-divider">/</span>
+                            <time class="post-full-meta-date"
+                                  datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}
+                            </time>
+                    {{/has}}
                     <h1>{{title}}</h1>
                 </div>
-
-                {{#has tag="Nyhed"}}
-                <section class="post-full-meta container-text">
-                    <time class="post-full-meta-date"
-                        datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-                    {{#primary_tag}}
-                    <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
-                    {{/primary_tag}}
-                </section>
-                {{/has}}
-
-                <div class="post-content">
-                    {{content}}
-                </div>
-            </section>
-            {{/post}}
-            <section class="related-posts">
-                <h2 class="related-posts__header">Relaterede nyheder</h2>
-                <div class="related-posts__box">
-                    {{> "related-posts"}}
-                </div>
-
-                
-            </section>
+        </header>
 
 
-            {{!-- Email subscribe form at the bottom of the page --}}
-            {{!-- {{#if @labs.subscribers}}
-            <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
-                {{subscribe_form placeholder="youremail@example.com"}}
-            </section>
-            {{/if}} --}}
+        <section class="post__content--full">
 
-            <footer class="post-full-footer">
-                {{!-- <h1>POST-full footer</h1> --}}
-                {{!-- There are two options for how we display the byline/author-info.
-                If the post has more than one author, we load a specific template
-                from includes/byline-multiple.hbs, otherwise, we just use the
-                default byline. --}}
+            
 
-                {{!-- {{#has author="count:>1"}}
-                    {{> "byline-multiple"}}
-                {{else}}
-                    {{> "byline-single"}}
-                {{/has}} --}}
+            <div class="post__content">
+                {{content}}
+            </div>
+        </section>
+        {{/post}}
+        <section class="related-posts">
+            <h2 class="related-posts__header">Relaterede nyheder</h2>
+            <div class="related-posts__box">
+                {{> "related-posts"}}
+            </div>
+        </section>
 
-            </footer>
 
-            {{!--
-            <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
-            </section>
-            --}}
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{!-- {{#if @labs.subscribers}}
+        <section class="subscribe-form">
+            <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
+            <p>Get the latest posts delivered right to your inbox</p>
+            {{subscribe_form placeholder="youremail@example.com"}}
+        </section>
+        {{/if}} --}}
 
-        </article>
+        <footer class="post-full-footer">
+            {{!-- <h1>POST-full footer</h1> --}}
+            {{!-- There are two options for how we display the byline/author-info.
+            If the post has more than one author, we load a specific template
+            from includes/byline-multiple.hbs, otherwise, we just use the
+            default byline. --}}
 
-    </div>
+            {{!-- {{#has author="count:>1"}}
+                {{> "byline-multiple"}}
+            {{else}}
+                {{> "byline-single"}}
+            {{/has}} --}}
+
+        </footer>
+
+        {{!--
+        <section class="post-full-comments">
+            If you want to embed comments, this is a good place to do it!
+        </section>
+        --}}
+    </article>
 </main>
-
-
-{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
