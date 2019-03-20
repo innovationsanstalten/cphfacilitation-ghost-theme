@@ -1,21 +1,23 @@
 .navigation {
     display: grid;
-    grid-template-columns: 1fr 8fr 2fr;
+    grid-template-columns: auto 8fr 2fr;
     white-space: nowrap;
-    transition: height .2s;
+    // transition: height .2s;
     &--left {
-        display: flex;
-        align-items: center;
+        margin-top: 2rem;
+        // display: flex;
+        // align-items: center;
     }
     &--right {
         display: flex;
         justify-content: flex-end;
-        padding: 2rem 2rem 0 0;
+        padding: 1rem 1rem 0 0;
+        margin: 3rem;
     }
     &__logo {
         display: block;
         &--img {
-            padding: 2rem 2rem 0 2rem;
+            padding: 2.5rem 2rem 0 4rem;
             transition: all .2s;
             height: 6rem;
         }
@@ -27,11 +29,10 @@
     }
     &__link {
         display: inline-block;
-        padding: 1rem 1.5rem;
-        margin: 0 1rem;
-        margin-top: .6rem;
+        padding: 2rem 2.5rem;
+        margin: 0 .2rem;
         text-decoration: none;
-        color: $color-black;
+        color: $color-white;
         
         transition: all .3s;
 
@@ -69,15 +70,25 @@
             text-decoration: none;
             // color: $color-white;
             z-index: 1;
-            width: 2.5rem;
+            width: 3.5rem;
             // margin: 1rem;
             // width: 3rem;
             svg{
                 padding: .3rem;
                 border: 1px solid $color-white;
+                transition: .2s border;
+                path{
+                    transition: .2s fill;
+                    fill: $color-white;
+                }
             }
-            path{
-                fill: $color-white;
+            &:hover{
+                svg{
+                    border: 1px solid $color-black;
+                    path{
+                        fill: $color-black;
+                    }
+                }
             }
         }
     }
@@ -88,7 +99,7 @@
         position: relative;
         color: $color-white;
         transition: all .5s;
-        margin-bottom: 0;
+        margin-left: 1rem;
     }
     &__burger {
         &--checkbox {
@@ -97,6 +108,48 @@
         &--button {
             display: none;
         }
+    }
+}
+
+.header--fixed{
+    transition: .4s background;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ddd;
+
+    .navigation{
+        &--left{
+            margin-top: .3rem;
+        }
+        &--right{
+            margin: 1rem;
+        }
+        &__link{
+            color: $color-black;
+        }
+        &__link--social svg {
+            border: 1px solid #333;
+            path{
+                fill: #333;
+            }
+        }
+        &__logo--img{
+            padding: 1.5rem 2rem 0 4rem;
+            height: 4rem;
+        }
+        &__find-us{
+            display: none;
+        }
+    }
+}
+
+// If js is not enabled
+.site-header.no-js {
+    position: fixed;
+    background-color: rgba($color-black, .9);
+    height: 60px;
+    &__logo-box {
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -114,7 +167,7 @@
 }
 
 .navigation--min {
-    background-color: $color-white;
+    // background-color: $color-white;
     transition: background-color .5s;
     transition-delay: .2s;
     z-index: 1;
@@ -124,10 +177,10 @@
     .navigation__logo--img {
         height: 5rem;
         z-index: 999;
-        padding: 1rem 2rem 0;
+        padding: 3rem 3rem 0;
     }
     .navigation__find-us {
-        color: $color-black;
+        color: $color-white;
         // transform: rotate(0);
         writing-mode: horizontal-tb;
         top: 0;
@@ -136,19 +189,19 @@
     .navigation__link--social {
         // color: $color-black;
         // border: 1px solid $color-black; // padding: .2rem .8rem;
-        position: relative;
-        bottom: 1px;
+        // position: relative;
+        // bottom: 1px;
         svg{
-            padding: .3rem;
-            border: 1px solid #333;
+            // padding: 1rem;
+            border: 1px solid $color-white;
         }
         path{
-            fill: #333;
+            fill: $color-white;
         }
     }
     .navigation--right {
         justify-content: flex-start;
-        flex-direction: row-reverse;
+        // flex-direction: row-reverse;
     }
 }
 
@@ -225,5 +278,11 @@
         color: $color-black;
         border: 1px solid $color-black;
         margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .navigation__logo--img{
+        padding: 1rem;
     }
 }
