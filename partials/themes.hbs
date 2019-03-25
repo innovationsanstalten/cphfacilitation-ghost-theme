@@ -5,12 +5,12 @@
             I alle vores projekter arbejder vi på at implementere FNs verdensmål. Når vi fører
             projekterne til dørs sikre vi at de vil kunne opnå disse...
         </p>
-        <a href="/temaer" class="temaer__button button button--blue">Se alle vores temaer</a>
+        <a href="/temaer/" class="temaer__button button button--blue">Se alle vores temaer</a>
     </div>
 
     <div class="temaer__right">
         {{#get "posts" filter="tags:tema" include="tags"}}
-            {{#foreach posts limit=6}}
+            {{#foreach posts limit=5}}
                 <article class="temaer__box">
                     {{> "image-box"}}
                 </article>

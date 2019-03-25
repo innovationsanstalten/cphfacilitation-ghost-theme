@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
+<main class="site-main" class="site-main outer">
     <div class="head-wrapper">
         <div class="company-name">
             <h1 class="heading-primary"><span class="heading-primary--green">cph</span>facilitation</h1>
@@ -20,24 +20,4 @@ into the {body} of the default.hbs template --}}
     {{> "news"}}
 
     {{> "themes"}}
-
-<script>
-        var navbar = document.querySelector(".navigation");
-        var header = document.querySelector(".site-header");
-        var wrapper = document.querySelector(".site-wrapper");
-
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                navbar.classList.add("navigation--min");
-                header.classList.add("header--sticky");
-                wrapper.classList.add("site-wrapper--extended");
-            }
-            else {
-                navbar.classList.remove("navigation--min");
-                header.classList.remove("header--sticky");
-                wrapper.classList.remove("site-wrapper--extended");
-            }
-        }
-    </script>
 </main>

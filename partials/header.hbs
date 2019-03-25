@@ -1,7 +1,7 @@
-{{#is "index"}}
-    <header class="site-header">
+{{#is "index, post"}}
+    <header class="site-header header--sticky PAGE">
 {{else}}
-    <header class="site-header header--sticky">
+    <header class="site-header header--sticky header--fixed">
 {{/is}}
     {{> "site-nav"}}
     </header>

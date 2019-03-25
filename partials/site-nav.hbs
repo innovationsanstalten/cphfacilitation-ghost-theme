@@ -1,7 +1,7 @@
 {{#is "index"}}
-<nav class="navigation">
+<nav class="navigation navigation--text-black">
 {{else}}
-<nav class="navigation navigation--min">
+<nav class="navigation">
 {{/is}}
 
     {{#if @site.logo}}
@@ -31,6 +31,7 @@
 
         <div class="navigation--right">
             <a class="navigation__link--social"
+                title="Find os på LinkedIn"
                 href="https://dk.linkedin.com/company/cphfacilitation">{{>"icons/linkedin"}}</a>
             <p class="navigation__find-us">Find os på</p>
         </div>

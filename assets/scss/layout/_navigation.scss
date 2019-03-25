@@ -3,6 +3,11 @@
     grid-template-columns: auto 8fr 2fr;
     white-space: nowrap;
     // transition: height .2s;
+    &--text-black{
+        .navigation__link{
+            color: $color-black;
+        }
+    }
     &--left {
         margin-top: 2rem;
         // display: flex;
@@ -16,6 +21,9 @@
     }
     &__logo {
         display: block;
+        &--link {
+            align-self: start;
+        }
         &--img {
             padding: 2.5rem 2rem 0 4rem;
             transition: all .2s;
@@ -30,7 +38,7 @@
     &__link {
         display: inline-block;
         padding: 2rem 2.5rem;
-        margin: 0 .2rem;
+        margin: 02px .2rem -4px;
         text-decoration: none;
         color: $color-white;
         
@@ -71,6 +79,7 @@
             // color: $color-white;
             z-index: 1;
             width: 3.5rem;
+            align-self: start;
             // margin: 1rem;
             // width: 3rem;
             svg{
@@ -84,9 +93,9 @@
             }
             &:hover{
                 svg{
-                    border: 1px solid $color-black;
+                    border: 1px solid $color-logo-green;
                     path{
-                        fill: $color-black;
+                        fill: $color-logo-green;
                     }
                 }
             }
@@ -112,8 +121,8 @@
 }
 
 .header--fixed{
-    transition: .4s background;
-    background: rgba(255, 255, 255, 0.9);
+    transition: .4s all;
+    background: $color-white;
     border-bottom: 1px solid #ddd;
 
     .navigation{
@@ -125,13 +134,27 @@
         }
         &__link{
             color: $color-black;
-        }
-        &__link--social svg {
-            border: 1px solid #333;
-            path{
-                fill: #333;
+            &--current{
+                color: $color-logo-green;
             }
         }
+        &__link--social{
+            svg {
+                border: 1px solid #333;
+                path{
+                    fill: #333;
+                }
+            }
+            &:hover{
+                svg{
+                    border: 1px solid $color-logo-green;
+                    path{
+                        fill: $color-logo-green;
+                    }
+                }
+            }
+        }
+
         &__logo--img{
             padding: 1.5rem 2rem 0 4rem;
             height: 4rem;
@@ -192,7 +215,6 @@
         // position: relative;
         // bottom: 1px;
         svg{
-            // padding: 1rem;
             border: 1px solid $color-white;
         }
         path{
@@ -206,19 +228,58 @@
 }
 
 @media only screen and (max-width:950px) {
+.header--fixed{
+    .navigation{
+        height: 80px;
+        &__logo--img {
+            padding: 1.5rem 2rem 0;
+            height: 5rem;
+        }
+        &__burger--button{
+            color: $color-black;
+        }
+        &--left {
+            // grid-area: c;
+            // position: relative;
+            margin-top: 0;
+        }
+        &--right{
+            margin: 0;
+        }
+        &__burger--checkbox:checked ~ .navigation{
+            &--left {
+                width: 100%;
+                padding-bottom: 10rem;
+            }
+            &--right {
+                padding-bottom: 5rem;
+            }
+        
+        }
+    }
+}
+
     .navigation {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 80px auto;
         grid-template-areas: "logo menu" "link link" "social social";
-        width: 100%;
-        height: 63px;
+        width: 100vw;
+        height: 100vh;
         &__logo--img {
-            height: 63px;
+            padding: 1.5rem 2rem 0 2rem;
+            height: 5rem;
         }
         &__list {
             flex-direction: column;
             margin: auto;
         }
+        &__link{
+            color: $color-black;
+            &--social{
+                margin-top: 0;
+            }
+        }
+        
         &--left,
         &--right {
             visibility: hidden;
@@ -229,22 +290,20 @@
         &--left {
             grid-area: link;
             position: relative;
-            bottom: 4rem;
+            margin-top: 0;
         }
         &--right {
             grid-area: social;
-            position: relative;
-            bottom: 4rem;
+            margin: 0;
+            padding-bottom: 5rem;
             justify-content: center;
-            flex-direction: column-reverse !important;
-            padding-bottom: 2rem;
         }
         &__burger {
             &--button {
                 display: inline-block;
-                width: 5rem;
-                padding: 1.7rem;
-                height: 6.3rem;
+                padding: 4rem;
+                color: white;
+                cursor: pointer;
                 justify-self: end;
                 align-self: center;
             }
@@ -267,17 +326,26 @@
         width: 100%;
     }
     .navigation__find-us {
-        transform: rotate(0) !important;
-        color: black;
-        font-size: 2rem;
-        top: 0;
-        text-align: center;
-        margin-top: 2rem;
+        display: none;
     }
     .navigation__link--social {
-        color: $color-black;
-        border: 1px solid $color-black;
-        margin-top: 2rem;
+        svg {
+            border: 1px solid #333;
+            path{
+                fill: #333;
+            }
+        }
+        &:hover{
+            svg{
+                border: 1px solid $color-logo-green;
+                path{
+                    fill: $color-logo-green;
+                }
+            }
+        }
+        // color: $color-black;
+        // border: 1px solid $color-black;
+        // margin-top: 2rem;
     }
 }
 
