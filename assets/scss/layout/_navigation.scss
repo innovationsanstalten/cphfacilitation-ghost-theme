@@ -26,7 +26,7 @@
         }
         &--img {
             padding: 2.5rem 2rem 0 4rem;
-            transition: all .2s;
+            transition: all .1s;
             height: 6rem;
         }
     }
@@ -78,7 +78,7 @@
             text-decoration: none;
             // color: $color-white;
             z-index: 1;
-            width: 3.5rem;
+            width: 2.5rem;
             align-self: start;
             // margin: 1rem;
             // width: 3rem;
@@ -107,7 +107,7 @@
         writing-mode: vertical-lr;
         position: relative;
         color: $color-white;
-        transition: all .5s;
+        transition: all .2s;
         margin-left: 1rem;
     }
     &__burger {
@@ -121,7 +121,7 @@
 }
 
 .header--fixed{
-    transition: .4s all;
+    transition: all .2s;
     background: $color-white;
     border-bottom: 1px solid #ddd;
 
