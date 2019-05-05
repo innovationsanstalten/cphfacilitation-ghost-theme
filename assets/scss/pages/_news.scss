@@ -3,11 +3,14 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: auto;
     grid-gap: 2rem;
-    width: 80%;
-    margin: auto;
     &__header {
         text-align: center;
-        margin: 10rem 0;
+        margin: 12rem 0 5rem 0;
+        p{
+            max-width: 70rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
     }
     &__item {
         height: 400px;

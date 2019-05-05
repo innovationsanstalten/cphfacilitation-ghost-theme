@@ -122,8 +122,8 @@
 
 .header--fixed{
     transition: all .2s;
-    background: $color-white;
-    border-bottom: 1px solid #ddd;
+    background: rgba($color-white, .9);
+    border-bottom: 1px solid #eee;
 
     .navigation{
         &--left{
@@ -301,7 +301,7 @@
         &__burger {
             &--button {
                 display: inline-block;
-                padding: 4rem;
+                padding: 4rem 2rem;
                 color: white;
                 cursor: pointer;
                 justify-self: end;
