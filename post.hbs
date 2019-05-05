@@ -9,12 +9,18 @@ into the {body} of the default.hbs template --}}
        const path = window.location.pathname;
        const temaer = document.getElementById("temaer");
        const nyheder = document.getElementById("nyheder");
+       const opgaver = document.getElementById("opgaver");
+       const partnere = document.getElementById("partnere");
        
         if (path.substring(0,9) == "/nyheder/") {
             nyheder.classList.add("current");
         } else if (path.substring(0,8) == "/temaer/") {
             temaer.classList.add("current");
-        }
+        } else if (path.substring(0,9) == "/opgaver/") {
+            opgaver.classList.add("current");
+        } else if (path.substring(0,10) == "/partnere/") {
+            partnere.classList.add("current");
+        } 
     </script>
 {{/contentFor}}
 
@@ -35,7 +41,7 @@ into the {body} of the default.hbs template --}}
                 {{/if}}
             </figure>
                 <div class="post__title">
-                    {{#primary_tag}}
+                    {{!-- {{#primary_tag}}
                          <span>{{name}}</span>
                     {{/primary_tag}}
                     {{#has tag="Nyhed"}}
@@ -43,7 +49,7 @@ into the {body} of the default.hbs template --}}
                             <time class="post-full-meta-date"
                                   datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}
                             </time>
-                    {{/has}}
+                    {{/has}} --}}
                     <h1>{{title}}</h1>
                 </div>
         </header>
