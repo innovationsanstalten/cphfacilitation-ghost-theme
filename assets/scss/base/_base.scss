@@ -7,7 +7,28 @@ html {
     font-size: 62.5%;  // 1rem = 10px
 }
 
+.site-main{
+    margin-bottom: 2rem;
+}
+
 .container {
-    width: 90vw;
+    width: 70%;
     margin: 0 auto;
+}
+
+.error-message{
+    text-align: center;
+    margin-top: 12rem;
+}
+
+@media only screen and (max-width:750px) {
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .container{
+        width: 100%;
+    }
 }
