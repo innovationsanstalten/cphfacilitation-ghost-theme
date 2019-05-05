@@ -1,0 +1,14 @@
+.opgaver {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+  &__item{
+    height: 400px;
+    max-width: 50%;
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 1rem;
+  }
+}
