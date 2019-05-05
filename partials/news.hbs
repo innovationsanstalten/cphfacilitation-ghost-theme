@@ -3,7 +3,7 @@
 
     <a href="/nyheder/" class="button button--orange">Se flere nyheder</a>
     
-    {{#get "posts" filter="tags:nyhed" include="tags"}}
+    {{#get "posts" filter="tags:nyheder" include="tags"}}
     {{#foreach posts limit=3}}
     <article class="section__news--{{@number}}">
         {{> "image-box"}}
