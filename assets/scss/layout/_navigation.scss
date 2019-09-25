@@ -2,43 +2,50 @@
     display: grid;
     grid-template-columns: auto 8fr 2fr;
     white-space: nowrap;
-    &--text-black{
-        .navigation__link{
+
+    &--text-black {
+        .navigation__link {
             color: $color-black;
         }
     }
+
     &--left {
         margin-top: 2rem;
     }
+
     &--right {
         display: flex;
         justify-content: flex-end;
         padding: 1rem 1rem 0 0;
         margin: 3rem;
     }
+
     &__logo {
         display: block;
+
         &--link {
             align-self: start;
         }
+
         &--img {
             padding: 2.5rem 2rem 0 4rem;
             transition: all .1s;
             height: 6rem;
         }
     }
+
     &__list {
         list-style: none;
         display: flex;
         align-items: center;
     }
+
     &__link {
         display: inline-block;
         padding: 2rem 2.5rem;
         margin: 02px .2rem -4px;
         text-decoration: none;
         color: $color-white;
-        
         transition: all .3s;
 
         &::after {
@@ -48,7 +55,6 @@
             width: 0;
             background-color: $color-logo-green;
             margin-top: .4rem;
-
             transition: all .3s;
         }
 
@@ -74,25 +80,30 @@
             z-index: 1;
             width: 2.5rem;
             align-self: start;
-            svg{
+
+            svg {
                 padding: .3rem;
                 border: 1px solid $color-white;
                 transition: .2s border;
-                path{
+
+                path {
                     transition: .2s fill;
                     fill: $color-white;
                 }
             }
-            &:hover{
-                svg{
+
+            &:hover {
+                svg {
                     border: 1px solid $color-logo-green;
-                    path{
+
+                    path {
                         fill: $color-logo-green;
                     }
                 }
             }
         }
     }
+
     &__find-us {
         writing-mode: vertical-lr;
         position: relative;
@@ -100,56 +111,66 @@
         transition: all .2s;
         margin-left: 1rem;
     }
+
     &__burger {
         &--checkbox {
             display: none;
         }
+
         &--button {
             display: none;
         }
     }
 }
 
-.header--fixed{
+.header--fixed {
     transition: all .2s;
     background: rgba($color-white, .9);
     border-bottom: 1px solid #eee;
 
-    .navigation{
-        &--left{
+    .navigation {
+        &--left {
             margin-top: .3rem;
         }
-        &--right{
+
+        &--right {
             margin: 1rem;
         }
-        &__link{
+
+        &__link {
             color: $color-black;
-            &--current{
+
+            &--current {
                 color: $color-logo-green;
             }
         }
-        &__link--social{
+
+        &__link--social {
             svg {
                 border: 1px solid #333;
-                path{
+
+                path {
                     fill: #333;
                 }
             }
-            &:hover{
-                svg{
+
+            &:hover {
+                svg {
                     border: 1px solid $color-logo-green;
-                    path{
+
+                    path {
                         fill: $color-logo-green;
                     }
                 }
             }
         }
 
-        &__logo--img{
+        &__logo--img {
             padding: 1.5rem 2rem 0 4rem;
             height: 4rem;
         }
-        &__find-us{
+
+        &__find-us {
             display: none;
         }
     }
@@ -160,6 +181,7 @@
     position: fixed;
     background-color: rgba($color-black, .9);
     height: 60px;
+
     &__logo-box {
         height: 40px;
         width: 40px;
@@ -174,7 +196,6 @@
         width: 100%;
         background-color: $color-logo-green;
         margin-top: .4rem;
-
         transition: all .3s;
     }
 }
@@ -183,14 +204,17 @@
     transition: background-color .5s;
     transition-delay: .2s;
     z-index: 1;
+
     .navigation__logo {
         margin-top: 1rem;
     }
+
     .navigation__logo--img {
         height: 5rem;
         z-index: 999;
         padding: 3rem 3rem 0;
     }
+
     .navigation__find-us {
         color: $color-white;
         // transform: rotate(0);
@@ -198,48 +222,56 @@
         top: 0;
         padding-right: 1rem;
     }
+
     .navigation__link--social {
-        svg{
+        svg {
             border: 1px solid $color-white;
         }
-        path{
+
+        path {
             fill: $color-white;
         }
     }
+
     .navigation--right {
         justify-content: flex-start;
     }
 }
 
 @media only screen and (max-width:950px) {
-.header--fixed{
-    .navigation{
-        height: 80px;
-        &__logo--img {
-            padding: 1.5rem 2rem 0;
-            height: 5rem;
-        }
-        &__burger--button{
-            color: $color-black;
-        }
-        &--left {
-            margin-top: 0;
-        }
-        &--right{
-            margin: 0;
-        }
-        &__burger--checkbox:checked ~ .navigation{
+    .header--fixed {
+        .navigation {
+            height: 80px;
+
+            &__logo--img {
+                padding: 1.5rem 2rem 0;
+                height: 5rem;
+            }
+
+            &__burger--button {
+                color: $color-black;
+            }
+
             &--left {
-                width: 100%;
-                padding-bottom: 10rem;
+                margin-top: 0;
             }
+
             &--right {
-                padding-bottom: 5rem;
+                margin: 0;
             }
-        
+
+            &__burger--checkbox:checked ~ .navigation {
+                &--left {
+                    width: 100%;
+                    padding-bottom: 10rem;
+                }
+
+                &--right {
+                    padding-bottom: 5rem;
+                }
+            }
         }
     }
-}
 
     .navigation {
         grid-template-columns: 1fr 1fr;
@@ -247,21 +279,25 @@
         grid-template-areas: "logo menu" "link link" "social social";
         width: 100vw;
         height: 100vh;
+
         &__logo--img {
             padding: 1.5rem 2rem 0 2rem;
             height: 5rem;
         }
+
         &__list {
             flex-direction: column;
             margin: auto;
         }
-        &__link{
+
+        &__link {
             color: $color-black;
-            &--social{
+
+            &--social {
                 margin-top: 0;
             }
         }
-        
+
         &--left,
         &--right {
             visibility: hidden;
@@ -269,17 +305,20 @@
             width: 0;
             transition: all .5s ease-in-out;
         }
+
         &--left {
             grid-area: link;
             position: relative;
             margin-top: 0;
         }
+
         &--right {
             grid-area: social;
             margin: 0;
             padding-bottom: 5rem;
             justify-content: center;
         }
+
         &__burger {
             &--button {
                 display: inline-block;
@@ -290,37 +329,46 @@
                 align-self: center;
             }
         }
-        &__burger--checkbox:checked~&--left,
-        &__burger--checkbox:checked~&--right {
+
+        &__burger--checkbox:checked ~ &--left,
+        &__burger--checkbox:checked ~ &--right {
             visibility: visible;
             background-color: $color-white;
             opacity: 1;
             width: 100%;
         }
-        &__burger--checkbox:checked~&--left {
+
+        &__burger--checkbox:checked ~ &--left {
             width: 100%;
         }
+
         .navigation__link {
             margin-top: 1rem;
         }
     }
-    &__burger--checkbox:checked~&--right {
+
+    &__burger--checkbox:checked ~ &--right {
         width: 100%;
     }
+
     .navigation__find-us {
         display: none;
     }
+
     .navigation__link--social {
         svg {
             border: 1px solid #333;
-            path{
+
+            path {
                 fill: #333;
             }
         }
-        &:hover{
-            svg{
+
+        &:hover {
+            svg {
                 border: 1px solid $color-logo-green;
-                path{
+
+                path {
                     fill: $color-logo-green;
                 }
             }
@@ -329,7 +377,7 @@
 }
 
 @media only screen and (max-width:380px) {
-    .navigation__logo--img{
+    .navigation__logo--img {
         padding: 1rem;
     }
 }
