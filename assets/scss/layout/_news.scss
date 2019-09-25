@@ -4,7 +4,6 @@
     margin-right: auto;
     
     display: grid;
-    // grid-column-gap:  1rem;
     grid-gap: 2rem;
         
     grid-template-columns: repeat(12, 1fr);
@@ -18,59 +17,32 @@
         grid-row-end: span 3;
       
         background-color: $color-logo-orange;
-        
-        
     }
 
-
   .button:link, .button:visited {
-        
         justify-self: center;
-        // align-self: center;
         margin-right: 13rem;
         margin-bottom: 2rem;
         
-        
         grid-row: 3;
         grid-column: 10 / span 3;
-        
     }
-
-    
-
 
     &--image {
-        
-        // height: 95%;
-        // width: 100%;
-        // object-fit: cover;
-        // overflow: hidden;
         cursor: pointer;
-        
-        
-        
     }
+
     &--top {
         position: absolute;
-        
         color: $color-white;
-        
         cursor: pointer;
-        // max-width: 80%;
-        // max-height: 90%;
     }
 
     &__header {
-        // font-size: $font-size-large;
-        // justify-self: center;
-        // align-self: center;
-        
-        
         margin-left: 4rem;
         grid-column: 3 / span 2;
         grid-row: 1;
         color: $color-white;
-
     }
 
     &--1 {
@@ -79,9 +51,6 @@
         grid-column-start: 1;
         grid-column-end: 5; 
         grid-row: 2;
-        
-       
-
     }
 
     &--2{
@@ -90,8 +59,6 @@
         grid-column-start: 5;
         grid-column-end: 9; 
         grid-row: 2;
-        
-           
     }
 
     &--3{
@@ -100,10 +67,7 @@
         grid-column-start: 9;
         grid-column-end: 13; 
         grid-row: 2;
-        
-            
     }
-    
     
     @media (max-width: 1650px) {
         width: 95vw;
@@ -116,7 +80,6 @@
             margin-bottom: 2rem;
             justify-self: center;
             align-self: normal;
-            
         }
     }
     
@@ -135,14 +98,6 @@
         
     //     position: relative;
         
-        
-        
-        
-
-
-        
-        
-
     //     &:before{
     //         content: '';
     //         grid-column-start:12;
@@ -217,8 +172,6 @@
 
     // }
 
-
-
     @media (max-width: 1100px) {
         width: 90vw;
         grid-template-columns: 1fr 1fr;
@@ -246,7 +199,6 @@
             cursor: pointer;
             margin-right: 0;
         }
-    
 
         &--1 {
             
@@ -279,7 +231,6 @@
                  
         }
 
-
         &__header {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -293,8 +244,6 @@
 
 
         .button:link, .button:visited {
-        
-            
             align-self: center;
             grid-column: 1 / span 2;
             grid-row: 4;
@@ -302,13 +251,7 @@
             
                       
         }
-
-        
     }
-
-
-
-
 
     @media (max-width: 700px) {
         grid-gap: 1em;
@@ -317,11 +260,6 @@
         position: relative;
         width: 100%;
         
-
-        
-        
-        
-        
         &:before{
             grid-column: 1 / 2;
             
@@ -329,30 +267,21 @@
             grid-row-end: span 5;
             
             margin-left: 0;
-            
-            
-            
-            
         }
 
         &--all{
             justify-self: center;
-            
         }
 
         &--image {
-            
             height: 95%;
             width: 100%;
             object-fit: cover;
             overflow: hidden;
             cursor: pointer;
             margin-right: 0;
-            
-            
         }
     
-
         &--1 {
             border-top: 1px solid rgba(0, 0, 0, 0.50);
             border-bottom: 1px solid rgba(0, 0, 0, 0.50);
@@ -384,37 +313,20 @@
             
             left: 0;
             margin:0;
-                 
         }
-
 
         &__header {
             grid-column: 1;
             grid-row: 1;
             justify-self: center;
             align-self: center;
-            
-            
-            
-            
         }
 
-
         .button:link, .button:visited {
-        
-            
             align-self: center;
             grid-row: 5;
             grid-column: 1;
             margin: 0;
-            
-                      
         }
-
-        
     }
-
-
-
-  
 }

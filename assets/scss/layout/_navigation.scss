@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: auto 8fr 2fr;
     white-space: nowrap;
-    // transition: height .2s;
     &--text-black{
         .navigation__link{
             color: $color-black;
@@ -10,8 +9,6 @@
     }
     &--left {
         margin-top: 2rem;
-        // display: flex;
-        // align-items: center;
     }
     &--right {
         display: flex;
@@ -73,15 +70,10 @@
 
         &--social {
             display: inline-block;
-            // padding: .5rem 1.1rem;
-            // margin: 0 1rem;
             text-decoration: none;
-            // color: $color-white;
             z-index: 1;
             width: 2.5rem;
             align-self: start;
-            // margin: 1rem;
-            // width: 3rem;
             svg{
                 padding: .3rem;
                 border: 1px solid $color-white;
@@ -102,8 +94,6 @@
         }
     }
     &__find-us {
-        // transform: rotate(90deg);
-        // top: 2rem;
         writing-mode: vertical-lr;
         position: relative;
         color: $color-white;
@@ -190,7 +180,6 @@
 }
 
 .navigation--min {
-    // background-color: $color-white;
     transition: background-color .5s;
     transition-delay: .2s;
     z-index: 1;
@@ -210,10 +199,6 @@
         padding-right: 1rem;
     }
     .navigation__link--social {
-        // color: $color-black;
-        // border: 1px solid $color-black; // padding: .2rem .8rem;
-        // position: relative;
-        // bottom: 1px;
         svg{
             border: 1px solid $color-white;
         }
@@ -223,7 +208,6 @@
     }
     .navigation--right {
         justify-content: flex-start;
-        // flex-direction: row-reverse;
     }
 }
 
@@ -239,8 +223,6 @@
             color: $color-black;
         }
         &--left {
-            // grid-area: c;
-            // position: relative;
             margin-top: 0;
         }
         &--right{
@@ -343,9 +325,6 @@
                 }
             }
         }
-        // color: $color-black;
-        // border: 1px solid $color-black;
-        // margin-top: 2rem;
     }
 }
 
