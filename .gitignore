@@ -1,3 +1,5 @@
 node_modules
 assets/built
 dist
+/.vs/cphfacilitation-ghost-theme/config
+/.vs
