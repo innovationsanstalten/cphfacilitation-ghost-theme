@@ -1,7 +1,7 @@
 {
     "name": "cphfacilitation",
     "description": "Ghost theme made for cphfacilitation by innovationsanstalten",
-    "version": "0.8.7",
+    "version": "0.8.8",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -37,22 +37,22 @@
     "bugs": "https://github.com/innovationsanstalten/cphfacilitation-ghost-theme/issues",
     "contributors": "https://github.com/innovationsanstalten/cphfacilitation-ghost-theme/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "6.3.6",
-        "beeper": "^1.1.1",
-        "cssnano": "3.7.1",
-        "gscan": "^2.0.0",
-        "gulp": "3.9.1",
-        "gulp-filter": "5.1.0",
-        "gulp-livereload": "3.8.1",
-        "gulp-postcss": "6.1.1",
+        "@tryghost/release-utils": "0.3.3",
+        "autoprefixer": "9.7.1",
+        "beeper": "2.0.0",
+        "cssnano": "4.1.10",
+        "gscan": "3.3.0",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "8.0.0",
         "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "1.6.0",
-        "gulp-uglify": "3.0.1",
-        "gulp-watch": "4.3.8",
-        "gulp-zip": "4.0.0",
-        "postcss-color-function": "2.0.1",
-        "postcss-custom-properties": "5.0.1",
-        "postcss-easy-import": "1.0.1",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.0.1",
+        "postcss-color-function": "4.1.0",
+        "postcss-custom-properties": "9.0.2",
+        "postcss-easy-import": "3.0.0",
         "pump": "3.0.0"
     },
     "config": {
@@ -77,5 +77,6 @@
                 "width": 2000
             }
         }
-    }
+    },
+    "dependencies": {}
 }
