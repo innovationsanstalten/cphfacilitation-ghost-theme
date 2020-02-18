@@ -94,10 +94,10 @@
 
             &:hover {
                 svg {
-                    border: 1px solid $color-logo-green;
+                    border: 1px solid $color-black;
 
                     path {
-                        fill: $color-logo-green;
+                        fill: $color-black;
                     }
                 }
             }
@@ -125,8 +125,8 @@
 
 .header--fixed {
     transition: all .2s;
-    background: rgba($color-white, .9);
-    border-bottom: 1px solid #eee;
+    background: rgba($color-white, .97);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 
     .navigation {
         &--left {
