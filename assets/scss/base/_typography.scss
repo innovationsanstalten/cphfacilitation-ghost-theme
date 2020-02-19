@@ -20,10 +20,6 @@ h1, h2, h3, h4, h5 {
     margin-top: 0;
     font-size: 5.653rem;
 
-    // &--main {
-    //     font-size: 6rem;
-    // }
-
     &--green {
         color: $color-logo-green;
     }
@@ -77,5 +73,31 @@ blockquote{
         li{
             margin: 1rem;
         }
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .heading-primary, h1 {
+        font-size: 4.6rem;
+    }
+
+    .heading-secondary, h2 {
+        // font-weight: 300;
+        font-size: 3.998rem;
+        
+    }
+    
+    .heading-tertiary, h3{
+        font-size: 2.427rem;
+        // font-weight: 300;
+        // text-transform: uppercase;
+    }
+    
+    h4{
+        font-size: 1.999rem;
+    }
+    
+    h5{
+        font-size: 1.414rem;
     }
 }
