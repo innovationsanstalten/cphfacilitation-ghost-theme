@@ -43,6 +43,8 @@
 }
 
 .head-image-container {
+    animation: fadein 1s;
+
     grid-column: 11/ span 3;
     grid-row: 3/ span 7;
 
@@ -51,12 +53,36 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 7;
 
-    background-image: url(../img/verdensmaal-globus.png);
+    background-image: url(../img/verdensmaal-globus-small.png);
     background-size: cover;
         height: 90%;
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 @media (max-width: 1300px) {
     .un-goal {
