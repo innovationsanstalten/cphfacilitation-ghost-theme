@@ -2,6 +2,8 @@
     <h2 class="section__news__header">Nyheder</h2>
 
     <a href="/nyheder/" class="button button--orange">Se flere nyheder</a>
+
+    {{!-- <div class="section__news__rss">Verdens bedste nyheder Verdens bedste nyheder Verdens bedste nyheder Verdens bedste nyheder</div> --}}
     
     {{#get "posts" filter="tags:nyheder" include="tags"}}
     {{#foreach posts limit=3}}
