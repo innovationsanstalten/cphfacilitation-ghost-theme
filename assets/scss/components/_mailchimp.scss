@@ -1,0 +1,38 @@
+.mailchimp {
+    background-color: $color-logo-orange;
+    color: $color-white;
+    margin-top: 3rem;
+    padding: 1rem 0.5rem 4rem 0.5rem;
+    text-align: center;
+
+    &__header {
+        display: block;
+        color: $color-white;
+    }
+
+    #mc-embedded-subscribe {
+        background-color: $color-logo-orange;
+        color: $color-white;
+        border: 1px solid $color-white;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-logo-orange;
+        }
+    }
+
+    #mce-EMAIL {
+        margin-bottom: 2rem;
+    }
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
