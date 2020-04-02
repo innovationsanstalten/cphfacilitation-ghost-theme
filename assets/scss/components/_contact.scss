@@ -56,6 +56,9 @@
             text-align: center;
             margin-top: 2rem;
             margin-bottom: 4rem;
+            &.sidebar {
+                text-align: start;
+            }
         }
         &--secondary {
             margin-top: 3rem;
