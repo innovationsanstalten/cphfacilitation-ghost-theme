@@ -39,12 +39,20 @@
         color: $color-logo-orange;
     }
 
-    &--green {
-        background-color: rgba($color-logo-green, 0);
+    &--green, &--green:visited{
+        background-color: rgba($color-white, 0);
+        border: 1px solid $color-white;
+    }
+
+    &--green:hover, &--green:active{
+        background-color: rgba($color-white, 1);
+        color: $color-logo-green
+    }
+
+    &--white {
+        background-color: transparent;
         color: $color-logo-green;
-        box-shadow: none;
         border: 1px solid $color-logo-green;
-        padding: 1.5rem 7rem;
         
         &:hover, &:active {
             background-color: rgba($color-logo-green, 1);
