@@ -7,6 +7,7 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const zip = require('gulp-zip');
+const chmod = require('gulp-chmod');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
@@ -92,6 +93,7 @@ function zipper(done) {
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**'
         ]),
+        chmod(0o755, true),
         zip(filename),
         dest(targetDir)
     ], handleError(done));
