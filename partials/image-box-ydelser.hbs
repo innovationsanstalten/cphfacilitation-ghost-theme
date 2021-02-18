@@ -1,0 +1,26 @@
+<div class="service-box">
+
+    {{#if featured_image}}
+    <img class="service-box__background-image" src="{{feature_image}}">
+    {{/if}}
+
+    <div class="service-box__overlay">
+        <h3 class="service-box__title">{{title}}</h3>
+        
+        <div class="service-box__content">
+            <p>{{excerpt words="33"}}</p>
+        </div>
+
+        {{#has tag="nyhed"}}
+        <time class="service-box__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        {{/has}}
+
+        <div class="service-container">
+            {{#foreach tags }}
+                {{#if feature_image}}
+                <img class="image-container__small-picture" src="{{feature_image}}" alt="Verdensmål nummer {{name}}">
+                {{/if}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
