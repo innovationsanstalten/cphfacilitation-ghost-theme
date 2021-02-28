@@ -10,7 +10,7 @@ into the {body} of the default.hbs template --}}
             <h2 class="heading-tertiary">{{@site.description}}</h2>
         </div>
         <div class="un-goal">
-            <img class="un-goal__image" src="../assets/img/17.gif" alt="Verdenmål, partnerskab for handling">
+            <img class="un-goal__image" src="{{asset 'img/17.gif'}}" alt="Verdenmål, partnerskab for handling">
             <p>Det vil vi gerne facilitere.</p>
         </div>
         <div class="head-image-container">
@@ -20,4 +20,6 @@ into the {body} of the default.hbs template --}}
     {{> "news"}}
 
     {{> "themes"}}
+
+    {{> "services"}}
 </main>
