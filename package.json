@@ -1,7 +1,7 @@
 {
     "name": "cphfacilitation",
     "description": "Ghost theme made for cphfacilitation by innovationsanstalten",
-    "version": "0.8.9",
+    "version": "0.9.1",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -58,7 +58,7 @@
         "pump": "3.0.0"
     },
     "config": {
-        "posts_per_page": 12,
+        "posts_per_page": 25,
         "image_sizes": {
             "xxs": {
                 "width": 30

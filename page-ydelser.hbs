@@ -18,9 +18,8 @@
 </head>
 
 <body class="{{body_class}}">
-        <div class="site-wrapper">
-    
-    {{> header}}
+    <div class="site-wrapper">
+        {{> header}}
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="site-main container">
             <header class="nyheder__header">
@@ -31,24 +30,18 @@
             </header>
             
             <section class="services">
-{{#get "posts" filter="tags:ydelser" include="tags" order="title asc"}}
+            {{#get "posts" filter="tags:ydelser" include="tags" order="title asc" limit="all"}}
                 {{#foreach posts  }}
                    <article class="services__item nyheder__item--{{@number}}">
                         {{> "image-box-ydelser"}}
                     </article>
                 {{/foreach}}
-{{/get}}
+            {{/get}}
             </section>
-        
-            {{!-- {{pagination}} --}}
-
         </main>
 
+        {{pagination}}
 
-        {{!-- {{#if pagination.pages}}
-            <script src="{{asset "built/infinitescroll.js"}}"></script>
-        {{/if}}  --}}
-        
         {{!-- The footer at the very bottom of the screen --}}
         {{>"footer"}}
     </div>

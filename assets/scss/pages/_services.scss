@@ -1,17 +1,16 @@
 .services {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
 
     &__item {
-        display: flex;
-        height: 320px;
-        min-width: 300px;
-        flex: 1 1 content;
-        flex: 1 1 fit-content;
-        flex: 1 1 23%;
-        margin: 1rem;
-        background-color: #fefefe;
+        flex: 1 1 20%;
+        max-width: 50ch;
+        min-width: 230px;
+        margin: 0 1.5rem;
+        padding: 1.5rem;
 
         // @media (max-width: 1200px) {
         //     flex-basis: 30%;
