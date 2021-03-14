@@ -9,7 +9,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const zip = require('gulp-zip');
 const chmod = require('gulp-chmod');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const beeper = require('beeper');
 const fs = require('fs');
 
@@ -75,8 +75,8 @@ function js(done) {
             'assets/js/lib/*.js',
             'assets/js/*.js'
         ], {sourcemaps: true}),
-        concat('casper.js'),
-        uglify(),
+        concat('script.js'),
+        terser(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
