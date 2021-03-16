@@ -13,12 +13,17 @@
     background-color: $color-logo-darkblue;
     padding: var(--spacing);
     margin-right: calc(var(--spacing) / 2);
+    
+    display: grid;
+    grid-template: 1fr / 1fr;
+  }
 
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    column-gap: calc(var(--spacing) / 2);
-    row-gap: 2rem;
+  &__grid {
+    grid-area: 1 / 1 / -1 / -1;
+    display: grid;
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
   }
 
   &__right {
@@ -52,15 +57,67 @@
     font-size: $font-size-default
   }
 
+  .active &__box {
+    animation: fade-in .6s ease-in forwards;
+
+    &:nth-child(1){
+      animation-delay: 0;
+    }
+    &:nth-child(2){
+      animation-delay: .1s;
+    }
+    &:nth-child(3){
+      animation-delay: .15s;
+    }
+    &:nth-child(4){
+      animation-delay: .11s;
+    }
+    &:nth-child(5){
+      animation-delay: .15s;
+    }
+    &:nth-child(6){
+      animation-delay: .20s;
+    }
+  }
+
+  .after-active &__box {
+    opacity: 1;
+    animation: fade-out .8s ease-out forwards;
+  }
+
   &__box {
-    flex: 1 0 36rem;
+    // flex: 1 0 36rem;
+    margin: 1rem;
+    opacity: 0;
+
+    &:nth-child(1){
+      animation-delay: 0;
+    }
+    &:nth-child(2){
+      animation-delay: .2s;
+    }
+    &:nth-child(3){
+      animation-delay: .25s;
+    }
+    &:nth-child(4){
+      animation-delay: .21s;
+    }
+    &:nth-child(5){
+      animation-delay: .25s;
+    }
+    &:nth-child(6){
+      animation-delay: .30s;
+    }
   }
 }
 
 @media (max-width: 1300px) {
   .services-section {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
+
     &__right {
       grid-column: 1 / -1;
       grid-row: 1 / span 1;
@@ -78,35 +135,43 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .services-section__grid {
+    grid-template: repeat(3, auto) / repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .services-section {
-    width: 90vw;
+    width: 95vw;
 
-    &__box {
-      flex: 1 0 45%;
+    &__left {
+      padding: calc(var(--spacing)/2);
     }
+
+    &__grid {
+      grid-template: repeat(6, auto) / 1fr;
+    }
+
   }
 }
 
 @media (max-width: 600px) {
   .services-section {
-    width: 100%;
-    
-    &__left {
-      padding: calc(var(--spacing)/2);
-    }
-
-    &__box {
-      flex: 1 0 100%;
-    }
-    
+    width: 100vw;
   }
 }
 
 @media (max-width: 400px) {
   .services-section {
-    width: 100vw;
 
+    &__right {
+      padding: 0 2rem 4rem;
+    }
     
+    &__left {
+      padding: calc(var(--spacing)/3);
+      margin: 0 calc(var(--spacing)/4);
+    }
   }
 }
