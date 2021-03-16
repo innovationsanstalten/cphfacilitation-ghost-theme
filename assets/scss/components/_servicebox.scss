@@ -9,14 +9,15 @@
     }
 
     &__content p{
-        font-size: clamp();
         font-size: 1.4rem;
+        margin-bottom: 0;
     }
 }
 
 .service-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1.4rem;
     
     &__small-picture {
         display: inline-block;
