@@ -1,19 +1,17 @@
 <section class="services-section">
 
 
-    <div class="services-section__left">
+    <article class="services-section__left">
         {{#get "posts" filter="tags:ydelser" limit="all" order="title asc"}}
             {{#foreach posts columns="6"}}
-                {{#if @rowStart}}<div class="services-section__grid">{{/if}}
+                {{#if @rowStart}}<section class="services-section__grid">{{/if}}
                     <article class="services-section__box">
                         {{> "image-box-ydelser"}}
                     </article>
-                {{#if @rowEnd}}</div>{{/if}}
+                {{#if @rowEnd}}</section>{{/if}}
             {{/foreach}}
         {{/get}}
-    </div>
-
-    </div>
+    </article>
 
 
     <div class="services-section__right">
