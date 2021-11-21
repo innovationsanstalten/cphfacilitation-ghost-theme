@@ -123,6 +123,14 @@ $post-text-width: 70rem;
 
 .kg-image {
     width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.kg-card {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
 .kg-card figcaption {

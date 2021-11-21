@@ -6,7 +6,9 @@
         background-color: $color-white;
     }
     
-    .post-content > *:not(.kg-gallery-card):not(.kg-image-card), .post-full-title, .post-full-meta {
+    .post-content > *:not(.kg-gallery-card):not(.kg-image-card),
+    .post-full-title, 
+    .post-full-meta {
         max-width: 70rem;
         margin-left: auto;
         margin-right: auto;
