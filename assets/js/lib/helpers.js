@@ -8,6 +8,9 @@ function sleep(time) {
 // Check if element is visible
 // https://gist.github.com/jjmu15/8646226
 function isVisible(element) {
+  if (!element) {
+    return
+  }
   const { top, bottom } = element.getBoundingClientRect();
   const vHeight = (window.innerHeight || document.documentElement.clientHeight);
 
