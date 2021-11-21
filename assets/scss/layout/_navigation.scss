@@ -24,7 +24,7 @@
         display: block;
 
         &--link {
-            align-self: start;
+            align-self: flex-start;
         }
 
         &--img {
@@ -79,7 +79,7 @@
             text-decoration: none;
             z-index: 1;
             width: 2.5rem;
-            align-self: start;
+            align-self: flex-start;
 
             svg {
                 padding: .3rem;
