@@ -12,7 +12,8 @@ async function nextSlide() {
 
 let isServiceShown = false
 
-document.addEventListener(
+if (window.location.pathname === '/') {
+  document.addEventListener(
   'scroll',
   () => {
     if (isVisible(services[0]) && !isServiceShown) {
@@ -23,4 +24,7 @@ document.addEventListener(
   },
   { passive: true }
 );
+}
+
+
 
